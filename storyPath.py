@@ -82,6 +82,8 @@ def SpaceshipInvestigation():
     CargoExplore = input("Do you want to (explore) or (pick up)?")
     if CargoExplore == "explore":
         meetingMonster()
+    elif CargoExplore == "pick up":
+        MazeForest()
 
 
 def Welcome():
