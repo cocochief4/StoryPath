@@ -92,9 +92,9 @@ def Welcome():
     print('YOU will be the one taking fault.')
     time.sleep(2)
     print('Are')
-    time.sleep(.25)
+    time.sleep(.5)
     print('You')
-    time.sleep(.25)
+    time.sleep(.5)
     print('Ready?!?!?!')
     areYouReady = input()
     if areYouReady == "yes":
