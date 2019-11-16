@@ -13,14 +13,18 @@ def meetingMonster():
         print("He says hi.")
         print("You believe that he is friendly")
         liveWithMonster()
-# def liveWithMonster():
-
 
 
 def playerName():
-    name = input('Before we begin, please enter your name.')
     print("Now, let us begin.")
     setting()
+
+
+def liveWithMonster():
+    print("You decide to befriend him.")
+    print("He befriends you")
+    mName = input("What do you name him?")
+    print(name + " have befriended " + mName + "!")
 
 
 def playAgain():
@@ -68,7 +72,6 @@ def SpaceshipInvestigation():
     print(" 6) a belt labeled 'gravity belt'")
     print("You see that the cockpit is not that big, and that even though you have enough supplies,")
     print("you might find something of use in the cargo space.")
-    CargoExplore =  input("Do you want to (explore) or (pick up)?")
     CargoExplore = input("Do you want to (explore) or (pick up)?")
     if CargoExplore == "explore":
         meetingMonster()
