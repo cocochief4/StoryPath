@@ -43,8 +43,18 @@ def sleep():
         readTag()
     elif tag == "No" or tag == "no":
         print("You go back to sleep")
+        #day 2
+        time.sleep(1)
+        print("You wake up to find it gone!")
+        print("You also find yourself chained up!")
+        prison()
 
-        
+def prison():
+    print("You're stuck in ropes!")
+    print("You have been sentenced to be tied up until you read the tag!")
+    read = input("")
+
+
 # This will be the setting that they are in. If you want to change, just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
 def setting():
