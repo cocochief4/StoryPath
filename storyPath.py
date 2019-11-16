@@ -44,6 +44,16 @@ def sleep():
     elif tag == "No" or tag == "no":
         print("You go back to sleep")
 
+
+def readTag():
+    print("The tag read:")
+    print(" This animal is a regoob, and they are very flexible, no skeleton at all!")
+    print("But this animal is yours, and if you read this letter, then that means that you")
+    print("did the right choice. regoobs are very strict to their instructions.")
+    print("They will tie you up with anything that they have until their deed is completed with you.")
+    print("What you have to do is find the temples around this world called Yiggurt, and to find the pieces of your "
+          "past.")
+
         
 # This will be the setting that they are in. If you want to change, just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
