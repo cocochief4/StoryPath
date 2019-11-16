@@ -50,6 +50,8 @@ def SpaceshipInvestigation():
     print(" 4) A portable sleeping bag")
     print(' 5) A bag labeled"food"')
     print(" 6) a belt labeled 'gravity belt'")
+    print("You see that the cockpit is not that big, and that even though you have enough supplies,")
+    print("you might find something of use in the cargo space.")
 
 
 def Welcome():
