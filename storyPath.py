@@ -1,8 +1,6 @@
 import time
 
 
-<<<<<<< Updated upstream
-=======
 def meetingMonster():
     print("You hear a noise when you open the cargo crate.")
     monster = input("Do you want to investigate the noise?")
@@ -10,7 +8,6 @@ def meetingMonster():
         print("B")
 
 
->>>>>>> Stashed changes
 def playerName():
     name = input('Before we begin, please enter your name.')
     print("Now, let us begin.")
@@ -62,7 +59,6 @@ def SpaceshipInvestigation():
     print(" 6) a belt labeled 'gravity belt'")
     print("You see that the cockpit is not that big, and that even though you have enough supplies,")
     print("you might find something of use in the cargo space.")
-    CargoExplore = input("Do you want to (explore) or (pick up)?")
     CargoExplore = input("Do you want to (explore) or (pick up) and go deeper in the forest?")
     if CargoExplore == "explore":
         meetingMonster()
