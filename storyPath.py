@@ -7,7 +7,14 @@ def meetingMonster():
     print("You hear a noise when you open the cargo crate.")
     monster = input("Do you want to investigate the noise?")
     if monster == "yes" or monster == "Yes":
-        print("B")
+        print("You find a large monster that is snoring. \n You gently poke it.")
+        print("ou leave some food in front of it and you sit there and wait.")
+        print("after a while. the monster wakes up, gobbles up the food, and looks at you.")
+        print("He says hi.")
+        print("You believe that he is friendly")
+        liveWithMonster()
+# def liveWithMonster():
+
 
 
 def playerName():
@@ -61,6 +68,7 @@ def SpaceshipInvestigation():
     print(" 6) a belt labeled 'gravity belt'")
     print("You see that the cockpit is not that big, and that even though you have enough supplies,")
     print("you might find something of use in the cargo space.")
+    CargoExplore =  input("Do you want to (explore) or (pick up)?")
     CargoExplore = input("Do you want to (explore) or (pick up)?")
     if CargoExplore == "explore":
         meetingMonster()
