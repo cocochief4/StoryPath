@@ -8,6 +8,8 @@ def meetingMonster():
     monster = input("Do you want to investigate the noise?")
     if monster == "yes" or monster == "Yes":
         print("B")
+
+
 def playerName():
     name = input('Before we begin, please enter your name.')
     print("Now, let us begin.")
@@ -59,7 +61,7 @@ def SpaceshipInvestigation():
     print(" 6) a belt labeled 'gravity belt'")
     print("You see that the cockpit is not that big, and that even though you have enough supplies,")
     print("you might find something of use in the cargo space.")
-    CargoExplore =  input("Do you want to (explore) or (pick up)?")
+    CargoExplore = input("Do you want to (explore) or (pick up)?")
     if CargoExplore == "explore":
         meetingMonster()
 
