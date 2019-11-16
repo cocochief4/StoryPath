@@ -1,6 +1,16 @@
 import time
 
 
+<<<<<<< Updated upstream
+=======
+def meetingMonster():
+    print("You hear a noise when you open the cargo crate.")
+    monster = input("Do you want to investigate the noise?")
+    if monster == "yes" or monster == "Yes":
+        print("B")
+
+
+>>>>>>> Stashed changes
 def playerName():
     name = input('Before we begin, please enter your name.')
     print("Now, let us begin.")
