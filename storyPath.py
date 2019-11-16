@@ -54,7 +54,7 @@ def SpaceshipInvestigation():
     print("you might find something of use in the cargo space.")
     CargoExplore =  input("Do you want to (explore) or (pick up)?")
     if CargoExplore == explore:
-        MeetingMonster()
+        meetingMonster()
 
 
 def Welcome():
