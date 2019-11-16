@@ -26,6 +26,7 @@ def liveWithMonster():
     print("He befriends you")
     mName = input("What do you name him?")
     print(name + " has befriended " + mName + "!")
+    sleep()
 
 
 def playAgain():
@@ -35,6 +36,15 @@ def playAgain():
         Welcome()
 
 
+def sleep():
+    print("When you sleep next to it, you notice that it has a tag on it.")
+    tag = input("Do you want to read the tag?")
+    if tag == "Yes" or tag == "yes":
+        readTag()
+    elif tag == "No" or tag == "no":
+        print("You go back to sleep")
+
+        
 # This will be the setting that they are in. If you want to change, just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
 def setting():
