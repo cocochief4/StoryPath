@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+
 import time
 
 
+def meetingMonster():
+    print("You hear a noise when you open the cargo crate.")
+    monster = input("Do you want to investigate the noise?")
+    if monster == "yes" or monster == "Yes":
+        print("B")
 def playerName():
     name = input('Before we begin, please enter your name.')
     print("Now, let us begin.")
@@ -38,7 +45,7 @@ def MazeForest():
     time.sleep(1)
     print("Soon, you cannot find your way anywhere.")
     time.sleep(1)
-    print("And ya die. The End.")
+    print("And you die. The End.")
     playAgain()
 
 
@@ -52,7 +59,7 @@ def SpaceshipInvestigation():
     print(" 6) a belt labeled 'gravity belt'")
     print("You see that the cockpit is not that big, and that even though you have enough supplies,")
     print("you might find something of use in the cargo space.")
-    CargoExplore = input("Do you want to (explore) or (pick up)?")
+    CargoExplore =  input("Do you want to (explore) or (pick up)?")
     if CargoExplore == "explore":
         meetingMonster()
 
@@ -70,7 +77,7 @@ def Welcome():
     time.sleep(.25)
     print('Ready?!?!?!')
     areYouReady = input()
-    while areYouReady == "yes":
+    if areYouReady == "yes":
         playerName()
 
 
