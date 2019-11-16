@@ -25,7 +25,7 @@ def liveWithMonster():
     print("You decide to befriend him.")
     print("He befriends you")
     mName = input("What do you name him?")
-    print(name + " have befriended " + mName + "!")
+    print(name + " has befriended " + mName + "!")
 
 
 def playAgain():
