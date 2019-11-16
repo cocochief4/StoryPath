@@ -59,7 +59,13 @@ def MazeForest():
     time.sleep(1)
     print("Soon, you cannot find your way anywhere.")
     time.sleep(1)
-    print("And you die. The End.")
+    print("You cannot see, and you stumble.")
+    time.sleep(1)
+    print("You crash into a tree, and receive a bad concussion.")
+    time.sleep(1)
+    print("Bleeding internally,")
+    time.sleep(.5)
+    print("you die. The End.")
     playAgain()
 
 
