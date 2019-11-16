@@ -52,7 +52,9 @@ def sleep():
 def prison():
     print("You're stuck in ropes!")
     print("You have been sentenced to be tied up until you read the tag!")
-    read = input("")
+    read = input("Do you want to read the tag?")
+    while read == "Yes" or read == "yes":
+        readTag()
 
 
 
