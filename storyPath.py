@@ -110,17 +110,14 @@ def setting():
     time.sleep(1)
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
-<<<<<<< HEAD
     investigateOrExplore = input('investigate(a), or explore(b)?')
     if investigateOrExplore == "a" or investigateOrExplore == "A":
         SpaceshipInvestigation()
     elif investigateOrExplore == "b" or investigateOrExplore == "B":
-=======
     investigateOrExplore = input('investigate, or explore?')
     if investigateOrExplore.lower()[:1:] == "i":
         SpaceshipInvestigation()
     elif investigateOrExplore.lower()[:1:] == "e":
->>>>>>> 3d0ebfe9523973cfdb6ec5436068bd4ff36591e1
         MazeForest()
     else:
         print("Invalid try again.")
