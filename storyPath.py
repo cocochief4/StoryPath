@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 import time
+
 # Monster Name
 mName = ""
 
 name = input('Before we begin, please enter your name.')
+
+
 # The line below is assigned to 0. If you see, it is also what you name the monster.
 #  This is the only way I thought to name the monster.
 
@@ -94,7 +97,6 @@ def readTag():
     time.sleep(2)
     print("What you have to do is find the temples around this world called Yiggurt,"
           "and to find the pieces of your past.")
-    
 
 
 # This will be the setting that they are in. If you want to change,
