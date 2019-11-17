@@ -97,6 +97,14 @@ Welcome()
 
 =======
 #!/usr/bin/env python3
+#!/usr/bin/env python3
+import time
+
+# Monster Name
+mName = ""
+
+name = input('Before we begin, please enter your name.')
+
 
 import time
 
@@ -170,6 +178,23 @@ def SpaceshipInvestigation():
     CargoExplore = input("Do you want to (explore) or (pick up)?")
     if CargoExplore == "explore":
         meetingMonster()
+    elif CargoExplore.lower()[:1:] == "p":
+        whatPick = input("What do you want to pick up? You can only pick up one thing: 1, 2, 3, 4, 5, or 6?")
+        if whatPick == "1":
+            MazeForest()
+        elif whatPick == "2":
+            MazeForest()
+        elif whatPick == "3":
+            printDelay("You burn yourself, and get mutated into a monster.", 1)
+            printDelay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
+            playAgain()
+        elif whatPick == "4":
+            MazeForest()
+        elif whatPick == "5":
+            MazeForest()
+        elif whatPick == "6":
+            print("You try it on, and you float!")
+            MazeForest()
 
 
 def Welcome():
