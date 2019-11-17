@@ -159,8 +159,9 @@ def SpaceshipInvestigation():
         elif whatPick == "2":
             MazeForest()
         elif whatPick == "3":
-            print("You burn yourself, and get mutated into a monster.")
-            print("The spaceship self-defense system activate's and you get shot")
+            printDelay("You burn yourself, and get mutated into a monster.", 1)
+            printDelay("The spaceship self-defense system activate's and you get shot, and die.", 1.25)
+            playAgain()
         elif whatPick == "4":
             MazeForest()
         elif whatPick == "5":
