@@ -9,10 +9,10 @@ MonsterName = mName = "0"
 def meetingMonster():
     print("You hear a noise when you open the cargo crate.")
     monster = input("Do you want to investigate the noise?")
-    if monster == "yes" or monster == "Yes":
+    if monster.lower()[:1:] == "y":
         print("You find a large monster that is snoring. \nYou gently poke it.")
         time.sleep(1.25)
-        print("ou leave some food in front of it and you sit there and wait.")
+        print("You leave some food in front of it and you sit there and wait.")
         time.sleep(7)
         print("after a while. the monster wakes up, gobbles up the food,"
               "and looks at you.")
@@ -43,7 +43,7 @@ def liveWithMonster():
 def playAgain():
     print("Do you want to play again?")
     play = input("yes(a) or no(b)?")
-    while play == 'A' or play == "a":
+    while play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
 
 
@@ -68,7 +68,7 @@ def prison():
     print("You're stuck in ropes!")
     print("You have been sentenced to be tied up until you read the tag!")
     read = input("Do you want to read the tag?")
-    while read == "Yes" or read == "yes":
+    while read.lower()[:1:] == "y":
         readTag()
 
 
@@ -133,9 +133,9 @@ def SpaceshipInvestigation():
           "and that even though you have enough supplies,")
     print("you might find something of use in the cargo space.")
     CargoExplore = input("Do you want to (explore) or (pick up)?")
-    if CargoExplore == "explore":
+    if CargoExplore.lower()[:1:] == "e":
         meetingMonster()
-    elif CargoExplore == "pick up":
+    elif CargoExplore.lower()[:1:] == "p":
         whatPick = input("What do you want to pick up? You can only pick up one thing: 1, 2, 3, 4, 5, or 6?")
         if whatPick == "1":
             MazeForest()
@@ -166,7 +166,7 @@ def Welcome():
     time.sleep(.5)
     print('Ready?!?!?!')
     areYouReady = input()
-    if areYouReady == "yes":
+    while areYouReady.lower()[:1:] == "y":
         playerName()
 
 
