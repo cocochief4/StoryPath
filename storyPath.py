@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import time
+
 name = input('Before we begin, please enter your name.')
 
 
@@ -43,11 +44,12 @@ def sleep():
         readTag()
     elif tag == "No" or tag == "no":
         print("You go back to sleep")
-        #day 2
+        # day 2
         time.sleep(1)
         print("You wake up to find it gone!")
         print("You also find yourself chained up!")
         prison()
+
 
 def prison():
     print("You're stuck in ropes!")
@@ -55,7 +57,6 @@ def prison():
     read = input("Do you want to read the tag?")
     while read == "Yes" or read == "yes":
         readTag()
-
 
 
 def readTag():
@@ -67,7 +68,6 @@ def readTag():
     print("What you have to do is find the temples around this world called Yiggurt, and to find the pieces of your "
           "past.")
 
-        
 
 # This will be the setting that they are in. If you want to change, just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
