@@ -110,11 +110,20 @@ def setting():
     time.sleep(1)
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
+<<<<<<< HEAD
     investigateOrExplore = input('investigate(a), or explore(b)?')
     if investigateOrExplore == "a" or investigateOrExplore == "A":
         SpaceshipInvestigation()
     elif investigateOrExplore == "b" or investigateOrExplore == "B":
+=======
+    investigateOrExplore = input('investigate, or explore?')
+    if investigateOrExplore.lower()[:1:] == "i":
+        SpaceshipInvestigation()
+    elif investigateOrExplore.lower()[:1:] == "e":
+>>>>>>> 3d0ebfe9523973cfdb6ec5436068bd4ff36591e1
         MazeForest()
+    else:
+        print("Invalid try again.")
 
 
 def MazeForest():
@@ -138,7 +147,7 @@ def SpaceshipInvestigation():
     print(" 2) A vest, very thick and looking uncomfortable to put on")
     print(" 3) 5 chemical vials")
     print(" 4) A portable sleeping bag")
-    print(' 5) A bag labeled"food"')
+    print(' 5) A bag labeled "food"')
     print(" 6) a belt labeled 'gravity belt'")
     print("You see that the cockpit is not that big,"
           "and that even though you have enough supplies,")
@@ -147,7 +156,21 @@ def SpaceshipInvestigation():
     if CargoExplore == "explore":
         meetingMonster()
     elif CargoExplore == "pick up":
-        MazeForest()
+        whatPick = input("What do you want to pick up? You can only pick up one thing: 1, 2, 3, 4, 5, or 6?")
+        if whatPick == "1":
+            MazeForest()
+        elif whatPick == "2":
+            MazeForest()
+        elif whatPick == "3":
+            print("You burn yourself, and get mutated into a monster.")
+            print("The spaceship self-defense system activate's and you get shot")
+        elif whatPick == "4":
+            MazeForest()
+        elif whatPick == "5":
+            MazeForest()
+        elif whatPick == "6":
+            print("You try it on, and you float!")
+            MazeForest()
 
 
 def Welcome():
