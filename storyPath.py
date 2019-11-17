@@ -96,7 +96,7 @@ def readTag():
           "until their deed is completed with you.")
     time.sleep(2)
     print("What you have to do is find the temples around this world called Yiggurt,"
-          "and to find the pieces of your past.")
+          "to find the pieces of your past.")
 
 
 # This will be the setting that they are in. If you want to change,
@@ -157,7 +157,7 @@ def SpaceshipInvestigation():
     time.sleep(2)
     print("you might find something of use in the cargo space.")
     time.sleep(1.5)
-    CargoExplore = input("Do you want to (explore) or (pick up)?")
+    CargoExplore = input("Do you want to explore(e) or pick up(p)?")
     if CargoExplore.lower()[:1:] == "e":
         meetingMonster()
     elif CargoExplore.lower()[:1:] == "p":
