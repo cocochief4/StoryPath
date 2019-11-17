@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 import time
+# Monster Name
+mName = ""
+
 name = input('Before we begin, please enter your name.')
 # The line below is assigned to 0. If you see, it is also what you name the monster.
 #  This is the only way I thought to name the monster.
-MonsterName = mName = "0"
+
+
+def printDelay(msg, delay):
+    print(msg)
+    time.sleep(delay)
 
 
 def meetingMonster():
@@ -30,6 +37,7 @@ def playerName():
 
 
 def liveWithMonster():
+    global mName
     print("You decide to befriend him.")
     time.sleep(1)
     print("He befriends you!")
@@ -38,6 +46,7 @@ def liveWithMonster():
     time.sleep(1)
     print(name + " has befriended " + mName + "!")
     sleep()
+    return mName
 
 
 def playAgain():
@@ -58,7 +67,7 @@ def sleep():
     time.sleep(5)
     print("The next day...")
     time.sleep(1)
-    print("You wake up to find " + MonsterName + " gone!")
+    print("You wake up to find " + mName + " gone!")
     print("You also find yourself chained up!")
     time.sleep(2)
     prison()
@@ -75,10 +84,14 @@ def prison():
 def readTag():
     print("The tag read:")
     print(" This animal is a regoob, and they are very flexible, no skeleton at all!")
+    time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
+    time.sleep(1.5)
     print("did the right choice. regoobs are very strict to their instructions.")
+    time.sleep(1.25)
     print("They will tie you up with anything that they have"
           "until their deed is completed with you.")
+    time.sleep(2)
     print("What you have to do is find the temples around this world called Yiggurt,"
           "and to find the pieces of your past.")
 
@@ -97,6 +110,10 @@ def setting():
     time.sleep(1)
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
+    investigateOrExplore = input('investigate(a), or explore(b)?')
+    if investigateOrExplore == "a" or investigateOrExplore == "A":
+        SpaceshipInvestigation()
+    elif investigateOrExplore == "b" or investigateOrExplore == "B":
     investigateOrExplore = input('investigate, or explore?')
     if investigateOrExplore.lower()[:1:] == "i":
         SpaceshipInvestigation()
