@@ -77,7 +77,7 @@ def prison():
     print("You're stuck in ropes!")
     print("You have been sentenced to be tied up until you read the tag!")
     read = input("Do you want to read the tag?")
-    while read.lower()[:1:] == "y":
+    if read.lower()[:1:] == "y":
         readTag()
 
 
@@ -94,6 +94,7 @@ def readTag():
     time.sleep(2)
     print("What you have to do is find the temples around this world called Yiggurt,"
           "and to find the pieces of your past.")
+    
 
 
 # This will be the setting that they are in. If you want to change,
@@ -110,11 +111,7 @@ def setting():
     time.sleep(1)
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
-    investigateOrExplore = input('investigate(a), or explore(b)?')
-    if investigateOrExplore == "a" or investigateOrExplore == "A":
-        SpaceshipInvestigation()
-    elif investigateOrExplore == "b" or investigateOrExplore == "B":
-    investigateOrExplore = input('investigate, or explore?')
+    investigateOrExplore = input('investigate or explore?')
     if investigateOrExplore.lower()[:1:] == "i":
         SpaceshipInvestigation()
     elif investigateOrExplore.lower()[:1:] == "e":
