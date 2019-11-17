@@ -140,15 +140,24 @@ def MazeForest():
 
 def SpaceshipInvestigation():
     print("When you reach the spaceship, you see a couple of things:")
+    time.sleep(1.25)
     print(" 1) A ray gun")
+    time.sleep(1)
     print(" 2) A vest, very thick and looking uncomfortable to put on")
+    time.sleep(1.5)
     print(" 3) 5 chemical vials")
+    time.sleep(1)
     print(" 4) A portable sleeping bag")
+    time.sleep(1)
     print(' 5) A bag labeled "food"')
+    time.sleep(1)
     print(" 6) a belt labeled 'gravity belt'")
+    time.sleep(1)
     print("You see that the cockpit is not that big,"
           "and that even though you have enough supplies,")
+    time.sleep(2)
     print("you might find something of use in the cargo space.")
+    time.sleep(1.5)
     CargoExplore = input("Do you want to (explore) or (pick up)?")
     if CargoExplore.lower()[:1:] == "e":
         meetingMonster()
