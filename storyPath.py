@@ -10,7 +10,7 @@ def meetingMonster():
     print("You hear a noise when you open the cargo crate.")
     monster = input("Do you want to investigate the noise?")
     if monster == "yes" or monster == "Yes":
-        print("You find a large monster that is snoring. \n You gently poke it.")
+        print("You find a large monster that is snoring. \nYou gently poke it.")
         time.sleep(1.25)
         print("ou leave some food in front of it and you sit there and wait.")
         time.sleep(7)
@@ -51,18 +51,17 @@ def sleep():
     print("When you sleep next to it, you notice that it has a tag on it.")
     time.sleep(1.5)
     tag = input("Do you want to read the tag? yes(a) or no(b)")
-    if tag == "a" or tag == "A":
+    while tag == "yes":
         readTag()
-    elif tag == "b" or tag == "B":
-        print("You go back to sleep")
-        # day 2
-        time.sleep(5)
-        print("The next day...")
-        time.sleep(1)
-        print("You wake up to find " + MonsterName + " gone!")
-        print("You also find yourself chained up!")
-        time.sleep(2)
-        prison()
+    print("You go back to sleep")
+    # day 2
+    time.sleep(5)
+    print("The next day...")
+    time.sleep(1)
+    print("You wake up to find " + MonsterName + " gone!")
+    print("You also find yourself chained up!")
+    time.sleep(2)
+    prison()
 
 
 def prison():
@@ -84,7 +83,8 @@ def readTag():
           "and to find the pieces of your past.")
 
 
-# This will be the setting that they are in. If you want to change, just rewrite the wording a little bit.
+# This will be the setting that they are in. If you want to change,
+# just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
 def setting():
     print('You awake to find yourself stranded in a forest,')
