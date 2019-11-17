@@ -21,7 +21,8 @@ def meetingMonster():
     print("You hear a noise when you open the cargo crate.")
     monster = input("Do you want to investigate the noise?")
     if monster.lower()[:1:] == "y":
-        print("You find a large monster that is snoring. \nYou gently poke it.")
+        print("You find a large monster that is snoring."
+              "You gently poke it.")
         time.sleep(1.25)
         print("You leave some food in front of it and you sit there and wait.")
         time.sleep(7)
@@ -79,7 +80,8 @@ def sleep():
 
 def prison():
     print("You're stuck in ropes!")
-    print("You have been sentenced to be tied up until you read the tag!")
+    print("YOU HAVE BEEN SENTENCED TO BE TIED UP UNTIL YOU READ THE TAG,"
+          "FOR IT IS MY DUTY!")
     read = input("Do you want to read the tag?")
     if read.lower()[:1:] == "y":
         readTag()
