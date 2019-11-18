@@ -1,4 +1,5 @@
 
+
 # !/usr/bin/env python3
 import time
 
@@ -25,7 +26,7 @@ def meetingMonster():
         print("after a while. the monster wakes up, gobbles up the food,"
               "and looks at you.")
         time.sleep(2)
-        print("'Hello,' Its deep voice rumbles around you.")
+        print("HI. it's great deep voice rumbles around you. (its in caps)")
         time.sleep(1.5)
         print("You believe that he is friendly.")
         time.sleep(1)
@@ -85,11 +86,11 @@ def prison():
 
 def readTag():
     print("The tag read:")
-    print(" This animal is a Regoob, and they are very flexible, no skeleton at all!")
+    print(" This animal is a regoob, and they are very flexible, no skeleton at all!")
     time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
     time.sleep(1.5)
-    print("did the right choice. Regoobs are very strict to their instructions.")
+    print("did the right choice. regoobs are very strict to their instructions.")
     time.sleep(1.25)
     print("They will tie you up with anything that they have"
           "until their deed is completed with you.")
@@ -162,7 +163,7 @@ def SpaceshipInvestigation():
     elif CargoExplore.lower()[:1:] == "p":
         whatPick = input("What do you want to pick up? You can only pick up one thing: 1, 2, 3, 4, 5, or 6?")
         if whatPick == "1":
-            MazeForest()
+            MazeForestSleep()
         elif whatPick == "2":
             MazeForest()
         elif whatPick == "3":
@@ -176,6 +177,14 @@ def SpaceshipInvestigation():
         elif whatPick == "6":
             print("You try it on, and you float!")
             MazeForest()
+
+
+def MazeForestSleep():
+    print("When you go exploring, you hear your stomach grumble,"
+          "thinking that you have to go find food sooner or later.")
+    print("But before you go anywhere,"
+          "you want to try out the ray gut first.")
+    print("Remembering ")
 
 
 def Welcome():
