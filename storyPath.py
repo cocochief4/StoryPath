@@ -4,6 +4,8 @@
 import time
 
 # Monster Name
+from builtins import input
+
 mName = ""
 
 name = input('Before we begin, please enter your name.')
