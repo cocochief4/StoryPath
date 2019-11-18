@@ -8,10 +8,6 @@ mName = ""
 name = input('Before we begin, please enter your name.')
 
 
-# The line below is assigned to 0. If you see, it is also what you name the monster.
-#  This is the only way I thought to name the monster.
-
-
 def printDelay(msg, delay):
     print(msg)
     time.sleep(delay)
