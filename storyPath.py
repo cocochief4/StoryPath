@@ -85,11 +85,11 @@ def prison():
 
 def readTag():
     print("The tag read:")
-    print(" This animal is a regoob, and they are very flexible, no skeleton at all!")
+    print(" This animal is a Regoob, and they are very flexible, no skeleton at all!")
     time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
     time.sleep(1.5)
-    print("did the right choice. regoobs are very strict to their instructions.")
+    print("did the right choice. Regoobs are very strict to their instructions.")
     time.sleep(1.25)
     print("They will tie you up with anything that they have"
           "until their deed is completed with you.")
