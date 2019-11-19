@@ -168,9 +168,9 @@ def thatsWhenHeRealized():
     printDelay("as you walk, something tugs a little bit, but not hard."
                " You look down and see a medium sized branch.", 2)
     printDelay("When you lift it from the gravity belt, you almost crumple"
-               "from the sudden seight.", 1.5)
+               "from the sudden weight.", 1.5)
     printDelay("When you clip it back onto your gravity belt,"
-               "it feels almost weightless.")
+               "it feels almost weightless.", 2)
 
 
 def chooseFromCockpit():
