@@ -1,4 +1,3 @@
-
 # !/usr/bin/env python3
 import time
 
@@ -162,7 +161,17 @@ def SpaceshipInvestigation():
     if CargoExplore.lower()[:1:] == "e":
         meetingMonster()
     elif CargoExplore.lower()[:1:] == "p":
-       chooseFromCockpit()
+        chooseFromCockpit()
+
+
+def thatsWhenHeRealized():
+    printDelay("as you walk, something tugs a little bit, but not hard."
+               " You look down and see a medium sized branch.", 2)
+    printDelay("When you lift it from the gravity belt, you almost crumple"
+               "from the sudden seight.", 1.5)
+    printDelay("When you clip it back onto your gravity belt,"
+               "it feels almost weightless.")
+
 
 def chooseFromCockpit():
     whatPick = input("What do you want to pick up?"
@@ -176,13 +185,15 @@ def chooseFromCockpit():
         printDelay("You burn yourself, and get mutated into a monster.", 1)
         printDelay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
         playAgain()
-    elif whatPick == "4":
-        MazeForest()
-    elif whatPick == "5":
-        MazeForest()
+    elif whatPick == "4":# MazeForest()
+    elif whatPick == "5":# MazeForest()
     elif whatPick == "6":
-        print("You try it on, and nothing happens.")
-        MazeForest()
+        print("You try it on, and nothing happens."
+              "Do you want to pick another item?")
+        pickAnotherItem = input()
+        while pickAnotherItem.lower()[:1:] == "y":
+            chooseFromCockpit()
+        thatsWhenHeRealized()
 
 
 def MazeForestSleep():
