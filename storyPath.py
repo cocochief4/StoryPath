@@ -185,8 +185,10 @@ def chooseFromCockpit():
         printDelay("You burn yourself, and get mutated into a monster.", 1)
         printDelay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
         playAgain()
-    elif whatPick == "4":# MazeForest()
-    elif whatPick == "5":# MazeForest()
+    elif whatPick == "4":
+        MazeForest()  # This we still need to fix.
+    elif whatPick == "5":
+        MazeForest()  # Same here.
     elif whatPick == "6":
         print("You try it on, and nothing happens."
               "Do you want to pick another item?")
