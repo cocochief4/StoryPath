@@ -69,9 +69,8 @@ def sleep():
     time.sleep(5)
     print("The next day...")
     time.sleep(1)
-    print("You wake up to find " + mName + " gone!")
-    print("You also find yourself chained up!")
-    time.sleep(2)
+    printDelay("You wake up to find " + mName + " gone!", 1)
+    printDelay("You also find yourself chained up!", 1)
     prison()
 
 
@@ -85,7 +84,7 @@ def prison():
 
 
 def readTag():
-    print("The tag read:")
+    printDelay("The tag read:", 1)
     print(" This animal is a regoob, and they are very flexible, no skeleton at all!")
     time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
@@ -164,13 +163,14 @@ def SpaceshipInvestigation():
         chooseFromCockpit()
 
 
-def thatsWhenHeRealized():
+def thatIsWhenHeRealized():
     printDelay("as you walk, something tugs a little bit, but not hard."
                " You look down and see a medium sized branch.", 2)
     printDelay("When you lift it from the gravity belt, you almost crumple"
                "from the sudden weight.", 1.5)
     printDelay("When you clip it back onto your gravity belt,"
                "it feels almost weightless.", 2)
+
 
 
 def chooseFromCockpit():
