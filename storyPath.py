@@ -57,7 +57,7 @@ def playAgain():
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
     else:
-        return 
+        return
 
 
 def sleep():
