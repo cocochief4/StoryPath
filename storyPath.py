@@ -58,12 +58,15 @@ def playAgain():
 
 
 def sleep():
-    print("When you sleep next to it, you notice that it has a tag on it.")
+    print("You sleep.")
     time.sleep(1.5)
+    printDelay("You toss and turn, really tired, but cannot sleep.", 1.5)
+    printDelay("And you notice a tag that is at the neck of the regoob,"
+               "which is really tired.", 1.75)
     tag = input("Do you want to read the tag? yes(a) or no(b)")
     while tag == "yes":
         readTag()
-    print("You go back to sleep")
+    print("You go back to sleep, actually sleeping.")
     # day 2
     time.sleep(5)
     print("The next day...")
@@ -89,7 +92,8 @@ def readTag():
     time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
     time.sleep(1.5)
-    print("did the right choice. regoobs are very strict to their instructions.")
+    print("did the right choice. regoobs are very strict to their instructions,"
+          "and this regoob's job was to give you this letter.")
     time.sleep(1.25)
     print("They will tie you up with anything that they have"
           "until their deed is completed with you.")
