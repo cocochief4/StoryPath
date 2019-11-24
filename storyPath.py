@@ -61,17 +61,18 @@ def sleep():
     print("When you sleep next to it, you notice that it has a tag on it.")
     time.sleep(1.5)
     tag = input("Do you want to read the tag? yes(a) or no(b)")
-    while tag == "yes":
+    if tag.lower()[:1:] == "y":
         readTag()
-    print("You go back to sleep")
-    # day 2
-    time.sleep(5)
-    print("The next day...")
-    time.sleep(1)
-    print("You wake up to find " + mName + " gone!")
-    print("You also find yourself chained up!")
-    time.sleep(2)
-    prison()
+    elif tag.lower()[:1:] == 'n':
+        print("You go back to sleep")
+        # day 2
+        time.sleep(5)
+        print("The next day...")
+        time.sleep(1)
+        print("You wake up to find " + mName + " gone!")
+        print("You also find yourself chained up!")
+        time.sleep(2)
+        prison()
 
 
 def prison():
@@ -195,4 +196,4 @@ def Welcome():
         playerName()
 
 
-Welcome()
+
