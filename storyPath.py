@@ -78,7 +78,7 @@ def sleep():
     print("You also find yourself chained up!")
     time.sleep(2)
     prison()
-    
+
 
 def prison():
     print("You're stuck in ropes!")
@@ -126,7 +126,6 @@ def setting():
     time.sleep(1)
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
-    invesOrExplore()
     isValidResponse = False
     while not isValidResponse:
         investigateOrExplore = input('investigate or explore?')
@@ -252,9 +251,10 @@ def Welcome():
     areYouReady = input()
     if areYouReady.lower()[:1:] == "y":
         playerName()
-Welcome()
+        Welcome()
     else:
         print("Okay, bye.")
         return
+
 
 Welcome()
