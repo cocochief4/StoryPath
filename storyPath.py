@@ -53,7 +53,7 @@ def liveWithMonster():
 def playAgain():
     print("Do you want to play again?")
     play = input("yes(a) or no(b)?")
-    while play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
+    if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
 
 
@@ -105,6 +105,17 @@ def readTag():
 # This will be the setting that they are in. If you want to change,
 # just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
+def invesOrExplore():
+    investigateOrExplore = input('investigate or explore?')
+    if investigateOrExplore.lower()[:1:] == "i":
+        SpaceshipInvestigation()
+    elif investigateOrExplore.lower()[:1:] == "e":
+        MazeForest()
+    else:
+        print("Invalid try again.")
+    invesOrExplore()
+
+
 def setting():
     print('You awake to find yourself stranded in a forest,')
     time.sleep(1)
@@ -116,13 +127,7 @@ def setting():
     time.sleep(1)
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
-    investigateOrExplore = input('investigate or explore?')
-    if investigateOrExplore.lower()[:1:] == "i":
-        SpaceshipInvestigation()
-    elif investigateOrExplore.lower()[:1:] == "e":
-        MazeForest()
-    else:
-        print("Invalid try again.")
+    invesOrExplore()
 
 
 def MazeForest():
@@ -195,8 +200,6 @@ def Welcome():
     time.sleep(.5)
     print('Ready?!?!?!')
     areYouReady = input()
-    while areYouReady.lower()[:1:] == "y":
+    if areYouReady.lower()[:1:] == "y":
         playerName()
-
-
 Welcome()
