@@ -1,8 +1,9 @@
-
 # !/usr/bin/env python3
 import time
 
 # Monster Name
+from builtins import input
+
 mName = ""
 
 name = input('Before we begin, please enter your name.')
@@ -55,6 +56,8 @@ def playAgain():
     play = input("yes(a) or no(b)?")
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
+    else:
+        return
 
 
 def sleep():
@@ -64,7 +67,7 @@ def sleep():
     printDelay("And you notice a tag that is at the neck of the regoob,"
                "which is really tired.", 1.75)
     tag = input("Do you want to read the tag? yes(a) or no(b)")
-    while tag == "yes":
+    if tag.lower()[:1:] == "y":
         readTag()
     print("You go back to sleep, actually sleeping.")
     # day 2
@@ -75,7 +78,7 @@ def sleep():
     print("You also find yourself chained up!")
     time.sleep(2)
     prison()
-
+    
 
 def prison():
     print("You're stuck in ropes!")
@@ -84,10 +87,15 @@ def prison():
     read = input("Do you want to read the tag?")
     if read.lower()[:1:] == "y":
         readTag()
+    else:
+        printDelay("The creature that is looking at you now kills itself on the rocks,"
+                   "and you, having nothing and no one to untie you,"
+                   "fall to the prey of another creature and die.", 4)
+        playAgain()
 
 
 def readTag():
-    print("The tag read:")
+    printDelay("The tag read:", 1)
     print(" This animal is a regoob, and they are very flexible, no skeleton at all!")
     time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
@@ -105,15 +113,6 @@ def readTag():
 # This will be the setting that they are in. If you want to change,
 # just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
-def invesOrExplore():
-    investigateOrExplore = input('investigate or explore?')
-    if investigateOrExplore.lower()[:1:] == "i":
-        SpaceshipInvestigation()
-    elif investigateOrExplore.lower()[:1:] == "e":
-        MazeForest()
-    else:
-        print("Invalid try again.")
-    invesOrExplore()
 
 
 def setting():
@@ -128,6 +127,17 @@ def setting():
     print("Do you want to investigate the spaceship,"
           "or explore the forest a little bit further?")
     invesOrExplore()
+    isValidResponse = False
+    while not isValidResponse:
+        investigateOrExplore = input('investigate or explore?')
+        if investigateOrExplore.lower()[:1:] == "i":
+            isValidResponse = True
+            SpaceshipInvestigation()
+        elif investigateOrExplore.lower()[:1:] == "e":
+            isValidResponse = True
+            MazeForest()
+        else:
+            print("Invalid try again.")
 
 
 def MazeForest():
@@ -169,22 +179,62 @@ def SpaceshipInvestigation():
     if CargoExplore.lower()[:1:] == "e":
         meetingMonster()
     elif CargoExplore.lower()[:1:] == "p":
-        whatPick = input("What do you want to pick up? You can only pick up one thing: 1, 2, 3, 4, 5, or 6?")
+        chooseFromCockpit()
+
+
+def thatIsWhenHeRealized():
+    printDelay("as you walk, something tugs a little bit, but not hard."
+               " You look down and see a medium sized branch.", 2)
+    printDelay("When you lift it from the gravity belt, you almost crumple"
+               "from the sudden weight.", 1.5)
+    printDelay("When you clip it back onto your gravity belt,"
+               "it feels almost weightless.", 2)
+    printDelay("This is when you realize you can take more things from the"
+               "cockpit this way.", 1.5)
+
+
+def chooseFromCockpit():
+    isValidResponse = False
+    while not isValidResponse:
+        whatPick = input("What do you want to pick up?"
+                         "You can only pick up one thing:"
+                         "1, 2, 3, 4, 5, or 6?")
         if whatPick == "1":
-            MazeForest()
+            isValidResponse = True
+            MazeForestSleep()
         elif whatPick == "2":
+            isValidResponse = True
             MazeForest()
         elif whatPick == "3":
+            isValidResponse = True
             printDelay("You burn yourself, and get mutated into a monster.", 1)
             printDelay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
             playAgain()
         elif whatPick == "4":
-            MazeForest()
+            isValidResponse = True
+            MazeForest()  # This we still need to fix.
         elif whatPick == "5":
-            MazeForest()
+            isValidResponse = True
+            MazeForest()  # Same here.
         elif whatPick == "6":
-            print("You try it on, and you float!")
-            MazeForest()
+            print("You try it on, and nothing happens."
+                  "Do you want to pick another item?")
+            pickAnotherItem = input()
+            if pickAnotherItem.lower()[:1:] == "n":
+                isValidResponse = True
+                thatIsWhenHeRealized()
+            else:
+                chooseFromCockpit()
+        else:
+            printDelay("Invalid response. Please pick one of the ones above.", 1.25)
+
+
+def MazeForestSleep():
+    print("When you go exploring, you hear your stomach grumble,"
+          "thinking that you have to go find food sooner or later.")
+    print("But before you go anywhere,"
+          "you want to try out the ray gut first.")
+    print("Remembering ")
 
 
 def Welcome():
@@ -202,4 +252,9 @@ def Welcome():
     areYouReady = input()
     if areYouReady.lower()[:1:] == "y":
         playerName()
+Welcome()
+    else:
+        print("Okay, bye.")
+        return
+
 Welcome()
