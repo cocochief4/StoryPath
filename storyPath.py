@@ -60,30 +60,23 @@ def playAgain():
 
 
 def sleep():
-    print("When you sleep next to it, you notice that it has a tag on it.")
+    print("You sleep.")
     time.sleep(1.5)
+    printDelay("You toss and turn, really tired, but cannot sleep.", 1.5)
+    printDelay("And you notice a tag that is at the neck of the regoob,"
+               "which is really tired.", 1.75)
     tag = input("Do you want to read the tag? yes(a) or no(b)")
     if tag.lower()[:1:] == "y":
         readTag()
-    elif tag.lower()[:1:] == 'n':
-        print("You go back to sleep")
-        # day 2
-        time.sleep(5)
-        print("The next day...")
-        time.sleep(1)
-        print("You wake up to find " + mName + " gone!")
-        print("You also find yourself chained up!")
-        time.sleep(2)
-        prison()
-        print("You go back to sleep")
-        # day 2
-        time.sleep(5)
-        print("The next day...")
-        time.sleep(1)
-        printDelay("You wake up to find " + mName + " gone!", 1)
-        printDelay("You also find yourself chained up!", 1)
-        prison()
-
+    print("You go back to sleep, actually sleeping.")
+    # day 2
+    time.sleep(5)
+    print("The next day...")
+    time.sleep(1)
+    print("You wake up to find " + mName + " gone!")
+    print("You also find yourself chained up!")
+    time.sleep(2)
+    prison()
 
 def prison():
     print("You're stuck in ropes!")
@@ -105,7 +98,8 @@ def readTag():
     time.sleep(1.5)
     print("But this animal is yours, and if you read this letter, then that means that you")
     time.sleep(1.5)
-    print("did the right choice. regoobs are very strict to their instructions.")
+    print("did the right choice. regoobs are very strict to their instructions,"
+          "and this regoob's job was to give you this letter.")
     time.sleep(1.25)
     print("They will tie you up with anything that they have"
           "until their deed is completed with you.")
@@ -117,6 +111,8 @@ def readTag():
 # This will be the setting that they are in. If you want to change,
 # just rewrite the wording a little bit.
 # Should we ask for the name right now, or later?
+
+
 def setting():
     print('You awake to find yourself stranded in a forest,')
     time.sleep(1)
@@ -253,8 +249,10 @@ def Welcome():
     areYouReady = input()
     if areYouReady.lower()[:1:] == "y":
         playerName()
+        Welcome()
     else:
         print("Okay, bye.")
         return
+
 
 Welcome()
