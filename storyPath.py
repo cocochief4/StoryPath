@@ -52,8 +52,7 @@ def liveWithMonster():
 
 
 def playAgain():
-    print("Do you want to play again?")
-    play = input("yes(a) or no(b)?")
+    play = input("Do you want to play again? \nYes(a) or no(b)")
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
     else:
@@ -84,7 +83,6 @@ def sleep():
         printDelay("You wake up to find " + mName + " gone!", 1)
         printDelay("You also find yourself chained up!", 1)
         prison()
-
 
 
 def prison():
