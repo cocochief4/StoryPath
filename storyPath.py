@@ -79,6 +79,7 @@ def sleep():
     time.sleep(2)
     prison()
 
+
 def prison():
     print("You're stuck in ropes!")
     print("YOU HAVE BEEN SENTENCED TO BE TIED UP UNTIL YOU READ THE TAG,"
