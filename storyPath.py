@@ -1,6 +1,5 @@
 # !/usr/bin/env python3
 import time
-
 # Monster Name
 from builtins import input
 
