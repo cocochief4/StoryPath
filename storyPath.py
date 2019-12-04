@@ -56,6 +56,7 @@ def playAgain():
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
     else:
+        printDelay("Okay, bye.", 1)
         return
 
 
