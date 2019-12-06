@@ -2,7 +2,7 @@
 import time
 # Monster Name
 from builtins import input
-characterInventory = []
+characterInventory = {}
 mName = ""
 
 name = input('Before we begin, please enter your name.')
