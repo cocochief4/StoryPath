@@ -2,6 +2,7 @@
 import time
 # Monster Name
 from builtins import input
+
 characterInventory = {}
 mName = ""
 
@@ -11,6 +12,33 @@ name = input('Before we begin, please enter your name.')
 def printDelay(msg, delay):
     print(msg)
     time.sleep(delay)
+
+
+def Welcome():
+    characterInventory.clear()
+    print("Welcome to Story Path!")
+    time.sleep(1)
+    print("In this game, YOU will be the one making the actions, and if YOU die...")
+    time.sleep(1)
+    print('YOU will be the one taking fault.')
+    time.sleep(2)
+    print('Are')
+    time.sleep(.5)
+    print('You')
+    time.sleep(.5)
+    print('Ready?!?!?!')
+    areYouReady = input()
+    if areYouReady.lower()[:1:] == "y":
+        Start()
+        Welcome()
+    else:
+        print("Okay, bye.")
+        return
+
+
+def Start():
+    print("Now, let us begin.")
+    setting()
 
 
 def meetingMonster():
@@ -30,11 +58,6 @@ def meetingMonster():
         print("You believe that he is friendly.")
         time.sleep(1)
         liveWithMonster()
-
-
-def playerName():
-    print("Now, let us begin.")
-    setting()
 
 
 def liveWithMonster():
@@ -202,6 +225,7 @@ def chooseFromCockpit():
             MazeForestSleep()
         elif whatPick == "2":
             isValidResponse = True
+            characterInventory.update({"vest": 1})
             MazeForest()
         elif whatPick == "3":
             isValidResponse = True
@@ -233,27 +257,6 @@ def MazeForestSleep():
     print("But before you go anywhere,"
           "you want to try out the ray gut first.")
     print("Remembering ")
-
-
-def Welcome():
-    print("Welcome to Story Path!")
-    time.sleep(1)
-    print("In this game, YOU will be the one making the actions, and if YOU die...")
-    time.sleep(1)
-    print('YOU will be the one taking fault.')
-    time.sleep(2)
-    print('Are')
-    time.sleep(.5)
-    print('You')
-    time.sleep(.5)
-    print('Ready?!?!?!')
-    areYouReady = input()
-    if areYouReady.lower()[:1:] == "y":
-        playerName()
-        Welcome()
-    else:
-        print("Okay, bye.")
-        return
 
 
 Welcome()
