@@ -252,11 +252,10 @@ def thatIsWhenHeRealized():
 
 
 def MazeForestSleep():
-    print("When you go exploring, you hear your stomach grumble,"
-          "thinking that you have to go find food sooner or later.")
-    print("But before you go anywhere,"
-          "you want to try out the ray gut first.")
-    print("Remembering ")
+    printDelay("When you go exploring, you hear your stomach grumble,"
+          "thinking that you have to go find food sooner or later.", 2)
+    printDelay("But before you go anywhere,"
+          "you want to try out the ray gut first.", 1.75)
 
 
 Welcome()
