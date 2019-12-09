@@ -163,7 +163,7 @@ def chooseFromCockpit():
             isValidResponse = True
             MazeForest()  # This we still need to fix.
         elif whatPick == "5":
-            
+            characterInventory.update({"food": 5})
             isValidResponse = True
             MazeForest()  # Same here.
         elif whatPick == "6":
@@ -251,6 +251,8 @@ def thatIsWhenHeRealized():
                "it feels almost weightless.", 2)
     printDelay("This is when you realize you can take more things from the"
                "cockpit this way.", 1.5)
+    printDelay("Do you want to take more things from the cockpit?", 1.25)
+    printDelay("")
 
 
 def MazeForestSleep():
