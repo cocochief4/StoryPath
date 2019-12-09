@@ -79,6 +79,21 @@ def setting():
             print("Invalid try again.")
 
 
+def MazeForest():
+    print("As you walk deeper into the forest, you find yourself getting lost.")
+    time.sleep(1)
+    print("Soon, you cannot find your way anywhere.")
+    time.sleep(1)
+    print("You cannot see, and you stumble.")
+    time.sleep(1)
+    print("You crash into a tree, and receive a bad concussion.")
+    time.sleep(1)
+    print("Your brain bleeding internally,")
+    time.sleep(.5)
+    print("you die. The End.")
+    playAgain()
+
+
 def SpaceshipInvestigation():
     print("When you reach the spaceship, you see a couple of things:")
     time.sleep(1.25)
@@ -104,21 +119,6 @@ def SpaceshipInvestigation():
         meetingMonster()
     elif CargoExplore.lower()[:1:] == "p":
         chooseFromCockpit()
-
-
-def MazeForest():
-    print("As you walk deeper into the forest, you find yourself getting lost.")
-    time.sleep(1)
-    print("Soon, you cannot find your way anywhere.")
-    time.sleep(1)
-    print("You cannot see, and you stumble.")
-    time.sleep(1)
-    print("You crash into a tree, and receive a bad concussion.")
-    time.sleep(1)
-    print("Your brain bleeding internally,")
-    time.sleep(.5)
-    print("you die. The End.")
-    playAgain()
 
 
 def meetingMonster():
@@ -159,9 +159,11 @@ def chooseFromCockpit():
             printDelay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
             playAgain()
         elif whatPick == "4":
+            characterInventory.update({"port-sleeping bag": 1})
             isValidResponse = True
             MazeForest()  # This we still need to fix.
         elif whatPick == "5":
+            
             isValidResponse = True
             MazeForest()  # Same here.
         elif whatPick == "6":
@@ -253,9 +255,9 @@ def thatIsWhenHeRealized():
 
 def MazeForestSleep():
     printDelay("When you go exploring, you hear your stomach grumble,"
-          "thinking that you have to go find food sooner or later.", 2)
+               "thinking that you have to go find food sooner or later.", 2)
     printDelay("But before you go anywhere,"
-          "you want to try out the ray gut first.", 1.75)
+               "you want to try out the ray gut first.", 1.75)
 
 
 Welcome()
