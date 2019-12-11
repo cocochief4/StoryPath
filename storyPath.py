@@ -2,6 +2,7 @@
 import time
 # Monster Name
 from builtins import input
+import os
 
 global stick
 
