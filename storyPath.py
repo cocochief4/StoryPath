@@ -4,8 +4,7 @@ import time
 from builtins import input
 import os
 
-global stick
-
+stick = None
 characterInventory = {}
 mName = ""
 
@@ -197,7 +196,7 @@ def liveWithMonster():
     print("After a while he gives you a stick.")
     time.sleep(1)
     yeet = input("You don't know why though...")
-    if yeet = up up down down left right left right B A
+    if yeet = up up down down left right left right B A:
         The monster fixes the alien spaceship, and you fly home to earth.
     stick = true
 
