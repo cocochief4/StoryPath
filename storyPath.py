@@ -3,6 +3,8 @@ import time
 # Monster Name
 from builtins import input
 
+global stick
+
 characterInventory = {}
 mName = ""
 
@@ -190,7 +192,11 @@ def liveWithMonster():
     print(name + " has befriended " + mName + "!")
     sleep()
     return mName
-
+    time.sleep(1)
+    print("After a while he gives you a stick.")
+    time.sleep(1)
+    print("You don't know why though...")
+    stick = true
 
 def sleep():
     print("You sleep.")
@@ -261,5 +267,5 @@ def MazeForestSleep():
     printDelay("But before you go anywhere,"
                "you want to try out the ray gut first.", 1.75)
 
-
+#Is this Welcome() at the end for if the player dies?
 Welcome()
