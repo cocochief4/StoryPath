@@ -196,9 +196,12 @@ def liveWithMonster():
     print("After a while he gives you a stick.")
     time.sleep(1)
     yeet = input("You don't know why though...")
-    if yeet = up up down down left right left right B A:
-        The monster fixes the alien spaceship, and you fly home to earth.
     stick = true
+    print("The monster points towards Maze Forrest.")
+    print("You both walk into Maze Forrest")
+    os.system('clear')
+    time.sleep(5)
+    print("Maze Forrest")
 
 def sleep():
     print("You sleep.")
