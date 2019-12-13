@@ -7,6 +7,8 @@ import os
 stick = None
 characterInventory = {}
 mName = ""
+global runOrFight
+runOrFight = "a"
 
 name = input('Before we begin, please enter your name.')
 
@@ -203,7 +205,17 @@ def liveWithMonster():
     time.sleep(5)
     print("Maze Forrest")
     time.sleep(1)
-    print("As you walk through Mae Forrest, you realize just how big it is.")
+    print("As you walk through Maze Forrest, you realize just how big it is.")
+    print("You hear sounds that sound like talking.")
+    print("You and the monster hide behind a bush.")
+    print("You look behind the bush, and see a horde of garblins.")
+    print("They are half gargoyle, half goblin creatures.")
+    time.sleep(1)
+    print("And they're usually defending something...")
+    print("Do you want to fight the garblins, or run away.")
+    runOrFight = input("run (r) or fight (f)")
+    if runOrFight.lower()[:1:] == "r"
+        print("yeet")
     
 
 def sleep():
