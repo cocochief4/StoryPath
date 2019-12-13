@@ -7,7 +7,6 @@ import os
 stick = None
 characterInventory = {}
 mName = ""
-global runOrFight
 runOrFight = "a"
 
 name = input('Before we begin, please enter your name.')
@@ -184,6 +183,8 @@ def chooseFromCockpit():
 
 
 def liveWithMonster():
+    global stick
+    global runOrFight
     global mName
     print("You decide to befriend him.")
     time.sleep(1)
@@ -215,7 +216,7 @@ def liveWithMonster():
     print("Do you want to fight the garblins, or run away.")
     runOrFight = input("run (r) or fight (f)")
     if runOrFight.lower()[:1:] == "r"
-        print("yeet")
+        print(yeet)
     
 
 def sleep():
