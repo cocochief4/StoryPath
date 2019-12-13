@@ -219,7 +219,7 @@ def liveWithMonster():
         print("You and the monster barely outrun the garblins, but by the time you outrun them, it's already dark.")
     else:
         print("You and the monster jump out of the bush and you pull out your stick.")
-        print("You and the monster succesfully defend against the garblins, and the garblins reatreat in a hurry.")
+        print("You and the monster succesfully defend against the garblins, and they reatreat in a hurry.")
     
 
 def sleep():
