@@ -202,6 +202,9 @@ def liveWithMonster():
     os.system('clear')
     time.sleep(5)
     print("Maze Forrest")
+    time.sleep(1)
+    print("As you walk through Mae Forrest, you realize just how big it is.")
+    
 
 def sleep():
     print("You sleep.")
