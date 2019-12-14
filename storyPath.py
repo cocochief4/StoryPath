@@ -301,7 +301,9 @@ def journey():
     printDelay("THE JOURNEY", 1)
     printDelay("Here is your inventory.", 1)
     printDelay(characterInventory, 1.5)
-    printDelay("Now that you ", 34)
+    printDelay("Now that you realize that this"
+               "is your goal,", 1.5)
+    printDelay("You set off not knowing where to start.", 1.25)
 
 
 def thatIsWhenHeRealized():
