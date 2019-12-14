@@ -2,8 +2,8 @@
 import time
 # Monster Name
 from builtins import input
-# import os
-# from sys import platform
+import os
+from sys import platform
 stick = None
 characterInventory = {}
 mName = ""
@@ -15,6 +15,10 @@ name = input('Before we begin, please enter your name.')
 def printDelay(msg, delay):
     print(msg)
     time.sleep(delay)
+
+
+def addInventory(key, amount):
+
 
 
 def playAgain():
@@ -189,7 +193,13 @@ def chooseFromCockpit():
 #         # linux
 #     elif platform == "win32":
 #         os.system('cls')
-
+def clearScreen():
+    if platform == "darwin":
+        os.system('clear')
+    elif platform == "linux" or platform == "linux2":
+        os.system('clear')
+    elif platform == "win32":
+        os.system('cls')
 
 def live_with_monster():
     global characterInventory
@@ -211,6 +221,8 @@ def live_with_monster():
     print("You both walk into the forest.")
     time.sleep(5)
     # clearScreen()
+    time.sleep(1)
+    clearScreen()
     time.sleep(5)
     print("MAZE FOREST")
     printDelay("Here is you inventory.", 1)
@@ -229,7 +241,7 @@ def live_with_monster():
         print("You and the monster barely outrun the garblins.")
         tired()
     else:
-        print("You and the monster jump out of the bush,"
+        print("You jump out of the bush,"
               "and successfully scare away the garblins with sticks.")
         tired()
 
@@ -300,6 +312,10 @@ def journey():
     printDelay("Now that you now where you are, you set out on the quest.", 3)
     printDelay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
     prophecy()
+    printDelay("Now that you realize that this"
+               "is your goal,", 1.5)
+    printDelay("You set off not knowing where to start.", 1.25)
+    printDelay("So you wander about, also wanting to find some food.", 1.5)
 
 
 def thatIsWhenHeRealized():
@@ -329,4 +345,5 @@ def prophecy():
 
 playAgain()
 # Is this Welcome() at the end for if the player dies?
+# No its to run
 Welcome()
