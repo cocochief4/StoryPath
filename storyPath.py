@@ -342,7 +342,10 @@ def prophecy():
     printDelay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
     printDelay("You notice that the regoob is lagging behind, and he looks scared.", 1)
     do = input("Do you ask him why is looks scared?")
-
+    if do.lower()[:1:] == "y":
+        printDelay("He says that the village is a hunting village, and regoobs are very expensive", 2)
+    elif do.lower()[:1:] == "n":
+        printDelay("")
 
 playAgain()
 # Is this Welcome() at the end for if the player dies?
