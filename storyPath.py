@@ -193,15 +193,13 @@ def liveWithMonster():
     mName = input("What do you name him?")
     time.sleep(1)
     print(name + " has befriended " + mName + "!")
-    sleep()
-    return mName
     time.sleep(1)
     print("After a while he gives you a stick.")
     time.sleep(1)
-    yeet = input("You don't know why though...")
-    stick = true
+    print("You don't know why though...")
     print("The monster points towards Maze Forrest.")
     print("You both walk into Maze Forrest")
+    time.sleep(5)
     os.system('clear')
     time.sleep(5)
     print("Maze Forrest")
@@ -215,11 +213,10 @@ def liveWithMonster():
     print("And they're usually defending something...")
     print("Do you want to fight the garblins, or run away.")
     runOrFight = input("run (r) or fight (f)")
-    if runOrFight.lower()[:1:] == "r"
-        print("You and the monster barely outrun the garblins, but by the time you outrun them, it's already dark.")
+    if runOrFight.lower()[:1:] == "r":
+        print("You and the monster barely outrun the goblins.")
     else:
-        print("You and the monster jump out of the bush and you pull out your stick.")
-        print("You and the monster succesfully defend against the garblins, and they reatreat in a hurry.")
+        print("You and the monster jump out of the bush and succesfully defend against the garblins.")
     
 
 def sleep():
