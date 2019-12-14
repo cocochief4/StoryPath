@@ -186,7 +186,7 @@ def clearScreen():
     if platform == "darwin":
         os.system('clear')
     elif platform == "linux" or platform == "linux2":
-        # linux
+        os.system('clear')
     elif platform == "win32":
         os.system('cls')
 
@@ -209,7 +209,7 @@ def liveWithMonster():
     print("You don't know why though...")
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
-    time.sleep(5)
+    time.sleep(1)
     clearScreen()
     time.sleep(5)
     print("MAZE FOREST")
@@ -319,6 +319,6 @@ def MazeForestSleep():
                "you want to try out the ray gut first.", 1.75)
 
 
-playAgain()
+liveWithMonster()
 # Is this Welcome() at the end for if the player dies?
 Welcome()
