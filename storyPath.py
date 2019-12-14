@@ -2,8 +2,8 @@
 import time
 # Monster Name
 from builtins import input
-import os
-from sys import platform
+# import os
+# from sys import platform
 stick = None
 characterInventory = {}
 mName = ""
@@ -77,12 +77,12 @@ def setting():
             SpaceshipInvestigation()
         elif investigateOrExplore.lower()[:1:] == "e":
             isValidResponse = True
-            MazeForest()
+            mazeForest()
         else:
             print("Invalid try again.")
 
 
-def MazeForest():
+def mazeForest():
     print("As you walk deeper into the forest, you find yourself getting lost.")
     time.sleep(1)
     print("Soon, you cannot find your way anywhere.")
@@ -140,7 +140,7 @@ def meetingMonster():
         time.sleep(1.5)
         print("You believe that he is friendly.")
         time.sleep(1)
-        liveWithMonster()
+        live_with_monster()
 
 
 def chooseFromCockpit():
@@ -151,11 +151,11 @@ def chooseFromCockpit():
                          "1, 2, 3, 4, 5, or 6?")
         if whatPick == "1":
             isValidResponse = True
-            MazeForestSleep()
+            mazeForestSleep()
         elif whatPick == "2":
             isValidResponse = True
             characterInventory.update({"vest": 1})
-            MazeForest()
+            mazeForest()
         elif whatPick == "3":
             isValidResponse = True
             printDelay("You burn yourself, and get mutated into a monster.", 1)
@@ -164,11 +164,11 @@ def chooseFromCockpit():
         elif whatPick == "4":
             characterInventory.update({"port-sleeping bag": 1})
             isValidResponse = True
-            MazeForest()  # This we still need to fix.
+            mazeForest()  # This we still need to fix.
         elif whatPick == "5":
             characterInventory.update({"food": 5})
             isValidResponse = True
-            MazeForest()  # Same here.
+            mazeForest()  # Same here.
         elif whatPick == "6":
             print("You try it on, and nothing happens."
                   "Do you want to pick another item?")
@@ -182,16 +182,16 @@ def chooseFromCockpit():
             printDelay("Invalid response. Please pick one of the ones above.", 1.25)
 
 
-def clearScreen():
-    if platform == "darwin":
-        os.system('clear')
-    elif platform == "linux" or platform == "linux2":
-        # linux
-    elif platform == "win32":
-        os.system('cls')
+# def clearScreen():
+#     if platform == "darwin":
+#         os.system('clear')
+#     elif platform == "linux" or platform == "linux2":
+#         # linux
+#     elif platform == "win32":
+#         os.system('cls')
 
 
-def liveWithMonster():
+def live_with_monster():
     global characterInventory
     global stick
     global runOrFight
@@ -210,7 +210,7 @@ def liveWithMonster():
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
     time.sleep(5)
-    clearScreen()
+    # clearScreen()
     time.sleep(5)
     print("MAZE FOREST")
     printDelay("Here is you inventory.", 1)
@@ -297,7 +297,9 @@ def journey():
     printDelay("THE JOURNEY", 1)
     printDelay("Here is your inventory.", 1)
     printDelay(characterInventory, 1.5)
-    printDelay("Now that you ", 34)
+    printDelay("Now that you now where you are, you set out on the quest.", 3)
+    printDelay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
+    prophecy()
 
 
 def thatIsWhenHeRealized():
@@ -312,11 +314,17 @@ def thatIsWhenHeRealized():
     printDelay("Do you want to take more things from the cockpit?", 1.25)
 
 
-def MazeForestSleep():
+def mazeForestSleep():
     printDelay("When you go exploring, you hear your stomach grumble,"
                "thinking that you have to go find food sooner or later.", 2)
     printDelay("But before you go anywhere,"
                "you want to try out the ray gut first.", 1.75)
+
+
+def prophecy():
+    printDelay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
+    printDelay("You notice that the regoob is lagging behind, and he looks scared.", 1)
+    do = input("Do you ask him why is looks scared?")
 
 
 playAgain()
