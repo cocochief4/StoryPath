@@ -183,6 +183,7 @@ def chooseFromCockpit():
 
 
 def liveWithMonster():
+    global characterInventory
     global stick
     global runOrFight
     global mName
@@ -198,15 +199,17 @@ def liveWithMonster():
     time.sleep(1)
     print("You don't know why though...")
     print("The monster points towards Maze Forrest.")
-    print("You both walk into Maze Forrest")
+    print("You both walk into the forest.")
     time.sleep(5)
     os.system('clear')
     time.sleep(5)
-    print("Maze Forrest")
+    print("MAZE FOREST")
+    printDelay("Here is you inventory.", 1)
+    print(characterInventory)
     time.sleep(1)
-    print("As you walk through Maze Forrest, you realize just how big it is.")
+    print("As you walk through this forest, you realize just how big it is.")
     print("You hear sounds that sound like talking.")
-    print("You and the monster hide behind a bush.")
+    print("You " + mName + "hide behind a bush.")
     print("You look behind the bush, and see a horde of garblins.")
     print("They are half gargoyle, half goblin creatures.")
     time.sleep(1)
@@ -216,7 +219,8 @@ def liveWithMonster():
     if runOrFight.lower()[:1:] == "r":
         print("You and the monster barely outrun the garblins.")
     else:
-        print("You and the monster jump out of the bush and succesfully defend against the garblins.")
+        print("You and the monster jump out of the bush,"
+              "and successfully scare away the garblins with sticks.")
     
 
 def sleep():
