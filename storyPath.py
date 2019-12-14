@@ -208,27 +208,36 @@ def liveWithMonster():
     print(characterInventory)
     time.sleep(1)
     printDelay("As you walk through this forest, you realize just how big it is.", 1.5)
-    print("You hear sounds that sound like talking.")
-    print("You " + mName + "hide behind a bush.")
-    print("You look behind the bush, and see a horde of garblins.")
+    printDelay("You hear sounds that sound like talking.", 1)
+    printDelay("You " + mName + "hide behind a bush.", 1)
+    printDelay("You look behind the bush, and see a horde of garblins.", 1.5)
     print("They are half gargoyle, half goblin creatures.")
     time.sleep(1)
-    print("And they're usually defending something...")
-    print("Do you want to fight the garblins, or run away.")
+    printDelay("And they're usually defending something...", 1.2)
+    printDelay("Do you want to fight the garblins, or run away?", 1.2)
     runOrFight = input("run (r) or fight (f)")
     if runOrFight.lower()[:1:] == "r":
         print("You and the monster barely outrun the garblins.")
+        tired()
     else:
         print("You and the monster jump out of the bush,"
               "and successfully scare away the garblins with sticks.")
+        tired()
+
+
+def tired():
+    printDelay("After all of what happened today,"
+               "you just want to fall asleep.", 1.75)
+    sleep()
 
 
 def sleep():
-    print("You sleep.")
+    print("You try to sleep.")
     time.sleep(1.5)
-    printDelay("You toss and turn, really tired, but cannot sleep.", 1.5)
+    printDelay("You toss and turn, really tired, but since you are so wired,"
+               "you cannot sleep.", 1.5)
     printDelay("And you notice a tag that is at the neck of the regoob,"
-               "which is really tired.", 1.75)
+               "who is really tired.", 1.75)
     tag = input("Do you want to read the tag? yes(a) or no(b)")
     if tag.lower()[:1:] == "y":
         readTag()
