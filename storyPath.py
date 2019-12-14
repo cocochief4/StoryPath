@@ -17,6 +17,10 @@ def printDelay(msg, delay):
     time.sleep(delay)
 
 
+def addInventory(key, amount):
+
+
+
 def playAgain():
     play = input("Do you want to play again? \nYes(a) or no(b)")
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
@@ -229,7 +233,7 @@ def liveWithMonster():
         print("You and the monster barely outrun the garblins.")
         tired()
     else:
-        print("You and the monster jump out of the bush,"
+        print("You jump out of the bush,"
               "and successfully scare away the garblins with sticks.")
         tired()
 
