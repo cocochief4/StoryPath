@@ -304,6 +304,7 @@ def journey():
     printDelay("Now that you realize that this"
                "is your goal,", 1.5)
     printDelay("You set off not knowing where to start.", 1.25)
+    printDelay("So you wander about, also wanting to find some food.", 1.5)
 
 
 def thatIsWhenHeRealized():
