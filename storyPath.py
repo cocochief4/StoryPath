@@ -22,7 +22,8 @@ def addInventory(key, amount):
 
 
 def playAgain():
-    play = input("Do you want to play again? \nYes(a) or no(b)")
+    play = input("Do you want to play again?"
+                 "Yes(a) or no(b)")
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         Welcome()
     else:
