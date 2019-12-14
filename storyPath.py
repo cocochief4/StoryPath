@@ -3,7 +3,7 @@ import time
 # Monster Name
 from builtins import input
 import os
-
+from sys import platform
 stick = None
 characterInventory = {}
 mName = ""
@@ -182,6 +182,15 @@ def chooseFromCockpit():
             printDelay("Invalid response. Please pick one of the ones above.", 1.25)
 
 
+def clearScreen():
+    if platform == "darwin":
+        os.system('clear')
+    elif platform == "linux" or platform == "linux2":
+        # linux
+    elif platform == "win32":
+        os.system('cls')
+
+
 def liveWithMonster():
     global characterInventory
     global stick
@@ -201,7 +210,7 @@ def liveWithMonster():
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
     time.sleep(5)
-    os.system('clear')
+    clearScreen()
     time.sleep(5)
     print("MAZE FOREST")
     printDelay("Here is you inventory.", 1)
@@ -238,7 +247,7 @@ def sleep():
                "you cannot sleep.", 1.5)
     printDelay("And you notice a tag that is at the neck of the regoob,"
                "who is really tired.", 1.75)
-    tag = input("Do you want to read the tag? yes(a) or no(b)")
+    tag = input("Do you want to read the tag? yes(y) or no(n)")
     if tag.lower()[:1:] == "y":
         readTag()
     print("You go back to sleep, actually sleeping.")
@@ -280,6 +289,15 @@ def readTag():
     time.sleep(2)
     print("What you have to do is find the temples around this world called Yiggurt,"
           "to find the pieces of your past.")
+    time.sleep(3)
+    journey()
+
+
+def journey():
+    printDelay("THE JOURNEY", 1)
+    printDelay("Here is your inventory.", 1)
+    printDelay(characterInventory, 1.5)
+    printDelay("Now that you ", 34)
 
 
 def thatIsWhenHeRealized():
@@ -292,7 +310,6 @@ def thatIsWhenHeRealized():
     printDelay("This is when you realize you can take more things from the"
                "cockpit this way.", 1.5)
     printDelay("Do you want to take more things from the cockpit?", 1.25)
-    printDelay("")
 
 
 def MazeForestSleep():
@@ -302,5 +319,6 @@ def MazeForestSleep():
                "you want to try out the ray gut first.", 1.75)
 
 
+playAgain()
 # Is this Welcome() at the end for if the player dies?
 Welcome()
