@@ -214,7 +214,7 @@ def liveWithMonster():
     print("Do you want to fight the garblins, or run away.")
     runOrFight = input("run (r) or fight (f)")
     if runOrFight.lower()[:1:] == "r":
-        print("You and the monster barely outrun the goblins.")
+        print("You and the monster barely outrun the garblins.")
     else:
         print("You and the monster jump out of the bush and succesfully defend against the garblins.")
     
