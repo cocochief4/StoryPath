@@ -221,7 +221,7 @@ def liveWithMonster():
     else:
         print("You and the monster jump out of the bush,"
               "and successfully scare away the garblins with sticks.")
-    
+
 
 def sleep():
     print("You sleep.")
@@ -292,5 +292,6 @@ def MazeForestSleep():
     printDelay("But before you go anywhere,"
                "you want to try out the ray gut first.", 1.75)
 
-#Is this Welcome() at the end for if the player dies?
+
+# Is this Welcome() at the end for if the player dies?
 Welcome()
