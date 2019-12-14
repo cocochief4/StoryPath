@@ -207,7 +207,7 @@ def liveWithMonster():
     printDelay("Here is you inventory.", 1)
     print(characterInventory)
     time.sleep(1)
-    print("As you walk through this forest, you realize just how big it is.")
+    printDelay("As you walk through this forest, you realize just how big it is.", 1.5)
     print("You hear sounds that sound like talking.")
     print("You " + mName + "hide behind a bush.")
     print("You look behind the bush, and see a horde of garblins.")
