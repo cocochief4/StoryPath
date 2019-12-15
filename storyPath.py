@@ -3,7 +3,7 @@ import time
 # Monster Name
 from builtins import input
 import os
-from sys import platform
+from sys import pla
 stick = None
 characterInventory = {}
 mName = ""
