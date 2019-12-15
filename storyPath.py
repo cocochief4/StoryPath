@@ -1,9 +1,10 @@
 # !/usr/bin/env python3
-import time
 # Monster Name
 from builtins import input
+import time
 import os
-from sys import pla
+from sys import platform
+
 stick = None
 characterInventory = {}
 mName = ""
@@ -18,7 +19,11 @@ def printDelay(msg, delay):
 
 
 def addInventory(key, amount):
-
+    global characterInventory
+    if key in characterInventory:
+        characterInventory[key] = amount
+    elif key not in characterInventory:
+        characterInventory.update({key: amount})
 
 
 def playAgain():
@@ -202,6 +207,7 @@ def clearScreen():
     elif platform == "win32":
         os.system('cls')
 
+
 def live_with_monster():
     global characterInventory
     global stick
@@ -312,11 +318,11 @@ def journey():
     printDelay(characterInventory, 1.5)
     printDelay("Now that you now where you are, you set out on the quest.", 3)
     printDelay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
-    prophecy()
     printDelay("Now that you realize that this"
                "is your goal,", 1.5)
     printDelay("You set off not knowing where to start.", 1.25)
     printDelay("So you wander about, also wanting to find some food.", 1.5)
+    meetingVillage()
 
 
 def thatIsWhenHeRealized():
@@ -338,14 +344,18 @@ def mazeForestSleep():
                "you want to try out the ray gut first.", 1.75)
 
 
-def prophecy():
+def meetingVillage():
+    global mName
     printDelay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
-    printDelay("You notice that the regoob is lagging behind, and he looks scared.", 1)
+    printDelay("You notice that" + mName + "is lagging behind, and he looks scared.", 1)
     do = input("Do you ask him why is looks scared?")
     if do.lower()[:1:] == "y":
-        printDelay("He says that the village is a hunting village, and regoobs are very expensive", 2)
+        printDelay("THE VILLAGE IS A HUNTING VILLAGE,"
+                   "AND FINDING US IN THE WILD ARE EXPENSIVE.", 2)
+
     elif do.lower()[:1:] == "n":
-        printDelay("")
+        printDelay("you just walk along, pondering why he is so scared.", 1.5)
+
 
 playAgain()
 # Is this Welcome() at the end for if the player dies?
