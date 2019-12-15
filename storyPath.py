@@ -248,9 +248,13 @@ def live_with_monster():
         print("You and the monster barely outrun the garblins.")
         tired()
     else:
-        print("You jump out of the bush,"
-              "and successfully scare away the garblins with sticks.")
-        tired()
+        print("You and the monster jump out of the bush and succesfully defend against the garblins.")
+        print("You walk a bit further in the forrest, and come across a huge temple like structure.")
+        time.sleep(5)
+        os.system('clear')
+        print("Temple 1")
+        time.sleep(5)
+        print("As you walk through the temple, you see how old it is.")
 
 
 def tired():
