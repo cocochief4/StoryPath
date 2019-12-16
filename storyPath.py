@@ -17,7 +17,7 @@ def printDelay(msg, delay):
     time.sleep(delay)
 
 
-def addInventory(key, amount):
+# def addInventory(key, amount):
 
 
 
@@ -312,7 +312,7 @@ def journey():
     printDelay(characterInventory, 1.5)
     printDelay("Now that you now where you are, you set out on the quest.", 3)
     printDelay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
-    prophecy()
+    first_town()
     printDelay("Now that you realize that this"
                "is your goal,", 1.5)
     printDelay("You set off not knowing where to start.", 1.25)
@@ -338,14 +338,28 @@ def mazeForestSleep():
                "you want to try out the ray gut first.", 1.75)
 
 
-def prophecy():
+def first_town():
     printDelay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
     printDelay("You notice that the regoob is lagging behind, and he looks scared.", 1)
     do = input("Do you ask him why is looks scared?")
     if do.lower()[:1:] == "y":
         printDelay("He says that the village is a hunting village, and regoobs are very expensive", 2)
     elif do.lower()[:1:] == "n":
-        printDelay("")
+        printDelay("You keep on going thinking that he is just tired.", 1)
+        dead_regoob()
+    else:
+        printDelay("Invalid response: Try Again", 0.5)
+
+
+def dead_regoob():
+    printDelay("You go to the village, and immediately you hear a trap go into action.", 3)
+    printDelay("You turn around and see that the regoob has been caught.", 1)
+    depression()
+
+
+def depression():
+    printDelay("Suffering from depression, you suicide by jumping into a pit of quick sand", 5)
+
 
 playAgain()
 # Is this Welcome() at the end for if the player dies?
