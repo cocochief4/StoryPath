@@ -98,13 +98,28 @@ def mazeForest():
     print("Soon, you cannot find your way anywhere.")
     time.sleep(1)
     print("You cannot see, and you stumble.")
-    time.sleep(1)
-    print("You crash into a tree, and receive a bad concussion.")
-    time.sleep(1)
-    print("Your brain bleeding internally,")
-    time.sleep(.5)
-    print("you die. The End.")
-    playAgain()
+    time.sleep(1.1)
+    printDelay("Your eyesight is hazy,"
+               "and your head really hurts.", 1.5)
+    printDelay("Do you want to search your pockets"
+               "or try to find your way back to the spaceship?")
+    isValidResponse = False
+    while not isValidResponse:
+        SearchOrFind = input()
+        if SearchOrFind.lower()[:1:] == "s":
+            isValidResponse = True
+            SearchPockets()
+        if SearchOrFind.lower()[:1:] == "f:":
+            isValidResponse = True
+            findSpaceship()
+
+            
+def findSpaceship():
+    pass
+
+
+def SearchPockets():
+    pass
 
 
 def SpaceshipInvestigation():
@@ -252,7 +267,7 @@ def live_with_monster():
         print("You walk a bit further in the forrest, and come across a huge temple like structure.")
         time.sleep(5)
         os.system('clear')
-        print("Temple 1")
+        print("Temple")
         time.sleep(5)
         print("As you walk through the temple, you see how old it is.")
 
