@@ -101,8 +101,8 @@ def mazeForest():
     time.sleep(1.1)
     printDelay("Your eyesight is hazy,"
                "and your head really hurts.", 1.5)
-    printDelay("Do you want to search your pockets"
-               "or try to find your way back to the spaceship?")
+    print("Do you want to search your pockets (s),"
+          "or try to find your way back to the spaceship (f)?")
     isValidResponse = False
     while not isValidResponse:
         SearchOrFind = input()
@@ -113,9 +113,14 @@ def mazeForest():
             isValidResponse = True
             findSpaceship()
 
-            
+
 def findSpaceship():
-    pass
+    printDelay("When you try to find you way"
+               "back to the spaceship, you meet"
+               "a dark shape blocking your path.", 3)
+    print("Do you want to run away (r),"
+          "or try to get around it (g),"
+          "or feel amazing and attack it head on (a)?")
 
 
 def SearchPockets():
