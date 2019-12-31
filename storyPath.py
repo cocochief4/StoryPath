@@ -52,7 +52,6 @@ def Welcome():
     areYouReady = input()
     if areYouReady.lower()[:1:] == "y":
         Start()
-        Welcome()
     else:
         print("Okay, bye.")
         return
@@ -121,6 +120,19 @@ def findSpaceship():
     print("Do you want to run away (r),"
           "or try to get around it (g),"
           "or feel amazing and attack it head on (a)?")
+    isValidResponse = False
+    while not isValidResponse:
+        if input().lower()[:1:] == "r":
+            isValidResponse = True
+            printDelay("After running for some time, you get tired."
+                       "Since it is night, and you cannot find your"
+                       "way anywhere, you just fall asleep in a "
+                       "tree trunk, but you never see the daylight again.", 4.1)
+            playAgain()
+        if input().lower()[:1:] == "g":
+            isValidResponse = True
+            printDelay("As you try to sneakily get around it,"
+                       "it seems to be working.", 1.25)
 
 
 def SearchPockets():
@@ -151,7 +163,7 @@ def SpaceshipInvestigation():
     if CargoExplore.lower()[:1:] == "e":
         meetingMonster()
     elif CargoExplore.lower()[:1:] == "p":
-        chooseFromCockpit()
+        chooseFromCockpit(None, None, None, None, None, None,)
 
 
 def meetingMonster():
@@ -173,15 +185,23 @@ def meetingMonster():
         live_with_monster()
 
 
-def chooseFromCockpit():
+def chooseFromCockpit(cannotPick1, cannotPick2, cannotPick3, cannotPick4, cannotPick5, cannotPick6):
     isValidResponse = False
     while not isValidResponse:
         whatPick = input("What do you want to pick up?"
                          "You can only pick up one thing:"
                          "1, 2, 3, 4, 5, or 6?")
         if whatPick == "1":
-            isValidResponse = True
-            mazeForestSleep()
+            if cannotPick1.lower()[:1:] == "r"\
+                    or cannotPick2.lower()[:1:] == "r"\
+                    or cannotPick3.lower()[:1:] == "r"\
+                    or cannotPick4.lower()[:1:] == "r"\
+                    or cannotPick5.lower()[:1:] == "r"\
+                    or cannotPick6.lower()[:1:] == "r":
+                pass
+            else:
+                isValidResponse = True
+                mazeForestSleep()
         elif whatPick == "2":
             isValidResponse = True
             characterInventory.update({"vest": 1})
@@ -207,18 +227,11 @@ def chooseFromCockpit():
                 isValidResponse = True
                 thatIsWhenHeRealized()
             else:
-                chooseFromCockpit()
+                chooseFromCockpit(None, None, None, None, None, None,)
         else:
             printDelay("Invalid response. Please pick one of the ones above.", 1.25)
 
 
-# def clearScreen():
-#     if platform == "darwin":
-#         os.system('clear')
-#     elif platform == "linux" or platform == "linux2":
-#         # linux
-#     elif platform == "win32":
-#         os.system('cls')
 def clearScreen():
     if platform == "darwin":
         os.system('clear')
@@ -358,7 +371,11 @@ def thatIsWhenHeRealized():
                "it feels almost weightless.", 2)
     printDelay("This is when you realize you can take more things from the"
                "cockpit this way.", 1.5)
-    printDelay("Do you want to take more things from the cockpit?", 1.25)
+    printDelay("Do you want to take more things from the cockpit? (yes or no)", 1.25)
+    isValidResponse = False
+    while not isValidResponse:
+        if input().lower()[:1:] == "y":
+            chooseFromCockpit("gravityBelt", None, None, None, None, None)
 
 
 def mazeForestSleep():
@@ -376,12 +393,16 @@ def meetingVillage():
     if do.lower()[:1:] == "y":
         printDelay("THE VILLAGE IS A HUNTING VILLAGE,"
                    "AND FINDING US IN THE WILD ARE EXPENSIVE.", 2)
-
+        getShot()
     elif do.lower()[:1:] == "n":
         printDelay("you just walk along, pondering why he is so scared.", 1.5)
+        getShot()
 
 
-playAgain()
+def getShot():
+    pass
+
+
 # Is this Welcome() at the end for if the player dies?
 # No its to run
 Welcome()
