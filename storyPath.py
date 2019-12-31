@@ -1,6 +1,5 @@
 # !/usr/bin/env python3
 # Monster Name
-from builtins import input
 import time
 import os
 from sys import platform
@@ -9,6 +8,7 @@ stick = None
 characterInventory = {}
 mName = ""
 runOrFight = "a"
+answer = "a"
 
 name = input('Before we begin, please enter your name.')
 
@@ -252,9 +252,18 @@ def live_with_monster():
         print("You walk a bit further in the forrest, and come across a huge temple like structure.")
         time.sleep(5)
         os.system('clear')
-        print("Temple 1")
+        print("The Temple of The Garblins")
         time.sleep(5)
         print("As you walk through the temple, you see how old it is.")
+        print("You find a first aid kit on the ground with a note on it.")
+        print("The note reads,")
+        print("To whoever finds this, good luck.")
+        print("You pick it up.")
+        print("You got a first aid kit.")
+        addInventory(FirstAidKit, 1)
+        print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
+
+
 
 
 def tired():
