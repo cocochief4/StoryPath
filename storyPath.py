@@ -298,6 +298,12 @@ def live_with_monster():
         print("You got a first aid kit.")
         addInventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
+        print("Do you want to take a different route or keep goig on the same route?")
+        answer = input("take a differnent route(t) or keep going (k)")
+        if answer.lower()[:1:] == "t":
+            print("")
+        else:
+            print("")
         # Temporarily ending the function
         return
 
@@ -311,7 +317,7 @@ def tired():
 def sleep():
     print("You try to sleep.")
     time.sleep(1.5)
-    printDelay("You toss and turn, really tired, but since you are so wired,"
+    printDelay("You toss and turn, really tired, but since you are so tired,"
                "you cannot sleep.", 1.5)
     printDelay("And you notice a tag that is at the neck of the regoob,"
                "who is really tired.", 1.75)
