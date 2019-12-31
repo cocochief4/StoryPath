@@ -296,6 +296,7 @@ def live_with_monster():
         print("You got a first aid kit.")
         addInventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
+        
 
 
 
