@@ -284,10 +284,12 @@ def live_with_monster():
         print("You and the monster jump out of the bush and succesfully defend against the garblins.")
         print("You walk a bit further in the forrest, and come across a huge temple like structure.")
         time.sleep(5)
-        os.system('clear')
-        print("The Temple of The Garblins")
+        clearScreen()
+        print("THE TEMPLE OF THE GARBLINS")
         print("Temple")
-        time.sleep(5)
+        time.sleep(1)
+        printDelay("Here is your inventory.", 1)
+        printDelay(characterInventory, 4)
         print("As you walk through the temple, you see how old it is.")
         print("You find a first aid kit on the ground with a note on it.")
         print("The note reads,")
@@ -296,9 +298,8 @@ def live_with_monster():
         print("You got a first aid kit.")
         addInventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
-        
-
-
+        # Temporarily ending the function
+        return
 
 
 def tired():
