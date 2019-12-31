@@ -270,7 +270,7 @@ def live_with_monster():
     time.sleep(1)
     printDelay("As you walk through this forest, you realize just how big it is.", 1.5)
     printDelay("You hear sounds that sound like talking.", 1)
-    printDelay("You " + mName + "hide behind a bush.", 1)
+    printDelay("You and " + mName + " hide behind a bush.", 1)
     printDelay("You look behind the bush, and see a horde of garblins.", 1.5)
     print("They are half gargoyle, half goblin creatures.")
     time.sleep(1)
@@ -294,7 +294,7 @@ def live_with_monster():
         print("To whoever finds this, good luck.")
         print("You pick it up.")
         print("You got a first aid kit.")
-        addInventory(FirstAidKit, 1)
+        addInventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
 
 
