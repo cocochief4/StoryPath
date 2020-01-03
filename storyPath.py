@@ -299,8 +299,8 @@ def live_with_monster():
         addInventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
         print("Do you want to take a different route or keep goig on the same route?")
-        answer = input("take a differnent route(t) or keep going (k)")
-        if answer.lower()[:1:] == "t":
+        differentRoute = input("take a differnent route(t) or keep going (k)")
+        if differentRoute.lower()[:1:] == "t":
             print("")
         else:
             print("")
