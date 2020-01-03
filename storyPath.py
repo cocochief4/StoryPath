@@ -18,17 +18,16 @@ def print_delay(msg, delay):
     time.sleep(delay)
 
 
-<<<<<<< HEAD
-# def addInventory(key, amount):
+# def add_inventory(key, amount):
 
-=======
-def addInventory(key, amount):
+
+def add_inventory(key, amount):
     global characterInventory
     if key in characterInventory:
         characterInventory[key] = amount
     elif key not in characterInventory:
         characterInventory.update({key: amount})
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+
 
 def play_again():
     play = input("Do you want to play again?"
@@ -53,16 +52,14 @@ def welcome():
     print('You')
     time.sleep(.5)
     print('Ready?!?!?!')
-<<<<<<< HEAD
     are_you_ready = input()
     if are_you_ready.lower()[:1:] == "y":
         start()
         welcome()
-=======
-    areYouReady = input()
-    if areYouReady.lower()[:1:] == "y":
-        Start()
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+    are_you_ready = input()
+    if are_you_ready.lower()[:1:] == "y":
+        start()
+
     else:
         print("Okay, bye.")
         return
@@ -108,7 +105,6 @@ def maze_forest():
     print("Soon, you cannot find your way anywhere.")
     time.sleep(1)
     print("You cannot see, and you stumble.")
-<<<<<<< HEAD
     time.sleep(1)
     print("You crash into a tree, and receive a bad concussion.")
     time.sleep(1)
@@ -116,48 +112,46 @@ def maze_forest():
     time.sleep(.5)
     print("you die. The End.")
     play_again()
-=======
     time.sleep(1.1)
-    printDelay("Your eyesight is hazy,"
-               "and your head really hurts.", 1.5)
+    print_delay("Your eyesight is hazy,"
+                "and your head really hurts.", 1.5)
     print("Do you want to search your pockets (s),"
           "or try to find your way back to the spaceship (f)?")
-    isValidResponse = False
-    while not isValidResponse:
-        SearchOrFind = input()
-        if SearchOrFind.lower()[:1:] == "s":
-            isValidResponse = True
-            SearchPockets()
-        if SearchOrFind.lower()[:1:] == "f:":
-            isValidResponse = True
-            findSpaceship()
+    is_valid_response = False
+    while not is_valid_response:
+        search_or_find = input()
+        if search_or_find.lower()[:1:] == "s":
+            is_valid_response = True
+            search_pockets()
+        if search_or_find.lower()[:1:] == "f:":
+            is_valid_response = True
+            find_spaceship()
 
 
-def findSpaceship():
-    printDelay("When you try to find you way"
-               "back to the spaceship, you meet"
-               "a dark shape blocking your path.", 3)
+def find_spaceship():
+    print_delay("When you try to find you way"
+                "back to the spaceship, you meet"
+                "a dark shape blocking your path.", 3)
     print("Do you want to run away (r),"
           "or try to get around it (g),"
           "or feel amazing and attack it head on (a)?")
-    isValidResponse = False
-    while not isValidResponse:
+    is_valid_response = False
+    while not is_valid_response:
         if input().lower()[:1:] == "r":
-            isValidResponse = True
-            printDelay("After running for some time, you get tired."
-                       "Since it is night, and you cannot find your"
-                       "way anywhere, you just fall asleep in a "
-                       "tree trunk, but you never see the daylight again.", 4.1)
-            playAgain()
+            is_valid_response = True
+            print_delay("After running for some time, you get tired."
+                        "Since it is night, and you cannot find your"
+                        "way anywhere, you just fall asleep in a "
+                        "tree trunk, but you never see the daylight again.", 4.1)
+            play_again()
         if input().lower()[:1:] == "g":
-            isValidResponse = True
-            printDelay("As you try to sneakily get around it,"
-                       "it seems to be working.", 1.25)
+            is_valid_response = True
+            print_delay("As you try to sneakily get around it,"
+                        "it seems to be working.", 1.25)
 
 
-def SearchPockets():
+def search_pockets():
     pass
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
 
 
 def spaceship_investigation():
@@ -180,19 +174,16 @@ def spaceship_investigation():
     time.sleep(2)
     print("you might find something of use in the cargo space.")
     time.sleep(1.5)
-<<<<<<< HEAD
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
     elif cargo_explore.lower()[:1:] == "p":
-        choose_from_cockpit()
-=======
-    CargoExplore = input("Do you want to explore(e) or pick up(p)?")
-    if CargoExplore.lower()[:1:] == "e":
-        meetingMonster()
-    elif CargoExplore.lower()[:1:] == "p":
-        chooseFromCockpit(None, None, None, None, None, None,)
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+        choose_from_cockpit(None, None, None, None, None, None,)
+    cargo_explore = input("Do you want to explore(e) or pick up(p)?")
+    if cargo_explore.lower()[:1:] == "e":
+        meeting_monster()
+    elif cargo_explore.lower()[:1:] == "p":
+        choose_from_cockpit(None, None, None, None, None, None,)
 
 
 def meeting_monster():
@@ -212,39 +203,27 @@ def meeting_monster():
         print("You believe that he is friendly.")
         time.sleep(1)
         live_with_monster()
-
-
-<<<<<<< HEAD
-def choose_from_cockpit():
+            
+            
+def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
     is_valid_response = False
     while not is_valid_response:
-        what_pick = input("What do you want to pick up? You can only pick up one thing: 1, 2, 3, 4, 5, or 6?")
+        what_pick = input("What do you want to pick up?"
+                          "You can only pick up one thing:"
+                          "1, 2, 3, 4, 5, or 6?")
         if what_pick == "1":
-            is_valid_response = True
-            maze_forest_sleep()
-        elif what_pick == "2":
-            is_valid_response = True
-=======
-def chooseFromCockpit(cannotPick1, cannotPick2, cannotPick3, cannotPick4, cannotPick5, cannotPick6):
-    isValidResponse = False
-    while not isValidResponse:
-        whatPick = input("What do you want to pick up?"
-                         "You can only pick up one thing:"
-                         "1, 2, 3, 4, 5, or 6?")
-        if whatPick == "1":
-            if cannotPick1.lower()[:1:] == "r"\
-                    or cannotPick2.lower()[:1:] == "r"\
-                    or cannotPick3.lower()[:1:] == "r"\
-                    or cannotPick4.lower()[:1:] == "r"\
-                    or cannotPick5.lower()[:1:] == "r"\
-                    or cannotPick6.lower()[:1:] == "r":
+            if cannot_pick1.lower()[:1:] == "r"\
+                    or cannot_pick2.lower()[:1:] == "r"\
+                    or cannot_pick3.lower()[:1:] == "r"\
+                    or cannot_pick4.lower()[:1:] == "r"\
+                    or cannot_pick5.lower()[:1:] == "r"\
+                    or cannot_pick6.lower()[:1:] == "r":
                 pass
             else:
-                isValidResponse = True
-                mazeForestSleep()
-        elif whatPick == "2":
-            isValidResponse = True
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+                is_valid_response = True
+                maze_forest_sleep()
+        elif what_pick == "2":
+            is_valid_response = True
             characterInventory.update({"vest": 1})
             maze_forest()
         elif what_pick == "3":
@@ -268,17 +247,12 @@ def chooseFromCockpit(cannotPick1, cannotPick2, cannotPick3, cannotPick4, cannot
                 is_valid_response = True
                 that_is_when_he_realized()
             else:
-<<<<<<< HEAD
-                choose_from_cockpit()
-=======
-                chooseFromCockpit(None, None, None, None, None, None,)
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+                choose_from_cockpit(None, None, None, None, None, None,)
         else:
             print_delay("Invalid response. Please pick one of the ones above.", 1.25)
 
 
-<<<<<<< HEAD
-# def clearScreen():
+# def clear_screen():
 #     if platform == "darwin":
 #         os.system('clear')
 #     elif platform == "linux" or platform == "linux2":
@@ -286,9 +260,6 @@ def chooseFromCockpit(cannotPick1, cannotPick2, cannotPick3, cannotPick4, cannot
 #     elif platform == "win32":
 #         os.system('cls')
 def clear_screen():
-=======
-def clearScreen():
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
     if platform == "darwin":
         os.system('clear')
     elif platform == "linux" or platform == "linux2":
@@ -316,7 +287,7 @@ def live_with_monster():
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
     time.sleep(5)
-    clearScreen()
+    clear_screen()
     time.sleep(1)
     clear_screen()
     time.sleep(5)
@@ -324,17 +295,14 @@ def live_with_monster():
     print_delay("Here is you inventory.", 1)
     print(characterInventory)
     time.sleep(1)
-<<<<<<< HEAD
     print_delay("As you walk through this forest, you realize just how big it is.", 1.5)
     print_delay("You hear sounds that sound like talking.", 1)
     print_delay("You " + mName + "hide behind a bush.", 1)
     print_delay("You look behind the bush, and see a horde of garblins.", 1.5)
-=======
-    printDelay("As you walk through this forest, you realize just how big it is.", 1.5)
-    printDelay("You hear sounds that sound like talking.", 1)
-    printDelay("You and " + mName + " hide behind a bush.", 1)
-    printDelay("You look behind the bush, and see a horde of garblins.", 1.5)
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+    print_delay("As you walk through this forest, you realize just how big it is.", 1.5)
+    print_delay("You hear sounds that sound like talking.", 1)
+    print_delay("You and " + mName + " hide behind a bush.", 1)
+    print_delay("You look behind the bush, and see a horde of garblins.", 1.5)
     print("They are half gargoyle, half goblin creatures.")
     time.sleep(1)
     print_delay("And they're usually defending something...", 1.2)
@@ -347,22 +315,22 @@ def live_with_monster():
         print("You and the monster jump out of the bush and succesfully defend against the garblins.")
         print("You walk a bit further in the forrest, and come across a huge temple like structure.")
         time.sleep(5)
-        clearScreen()
+        clear_screen()
         print("THE TEMPLE OF THE GARBLINS")
         print("Temple")
         time.sleep(1)
-        printDelay("Here is your inventory.", 1)
-        printDelay(characterInventory, 4)
+        print_delay("Here is your inventory.", 1)
+        print_delay(characterInventory, 4)
         print("As you walk through the temple, you see how old it is.")
         print("You find a first aid kit on the ground with a note on it.")
         print("The note reads,")
         print("To whoever finds this, good luck.")
         print("You pick it up.")
         print("You got a first aid kit.")
-        addInventory("FirstAidKit", 1)
+        add_inventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
         print("Do you want to take a different route or keep goig on the same route?")
-        answer = input("take a differnent route(t) or keep going (k)")
+        answer = input("take a different route(t) or keep going (k)")
         if answer.lower()[:1:] == "t":
             print("")
         else:
@@ -379,15 +347,10 @@ def tired():
 def sleep():
     print("You try to sleep.")
     time.sleep(1.5)
-<<<<<<< HEAD
     print_delay("You toss and turn, really tired, but since you are so wired, you cannot sleep.", 1.5)
     print_delay("And you notice a tag that is at the neck of the regoob, who is really tired.", 1.75)
-=======
-    printDelay("You toss and turn, really tired, but since you are so tired,"
-               "you cannot sleep.", 1.5)
-    printDelay("And you notice a tag that is at the neck of the regoob,"
-               "who is really tired.", 1.75)
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
+    print_delay("You toss and turn, really tired, but since you are so tired, you cannot sleep.", 1.5)
+    print_delay("And you notice a tag that is at the neck of the regoob, who is really tired.", 1.75)
     tag = input("Do you want to read the tag? yes(y) or no(n)")
     if tag.lower()[:1:] == "y":
         read_tag()
@@ -435,7 +398,6 @@ def read_tag():
 
 
 def journey():
-<<<<<<< HEAD
     print_delay("THE JOURNEY", 1)
     print_delay("Here is your inventory.", 1)
     print_delay(characterInventory, 1.5)
@@ -447,19 +409,10 @@ def journey():
     print_delay("So you wander about, also wanting to find some food.", 1.5)
 
 
-def that_is_when_he_realized():
-    print_delay("as you walk, something tugs a little bit, but not hard. You look down and see a medium "
-                "sized branch.", 2)
-    print_delay("When you lift it from the gravity belt, you almost crumple from the sudden weight.", 1.5)
-    print_delay("When you clip it back onto your gravity belt, it feels almost weightless.", 2)
-    print_delay("This is when you realize you can take more things from the cockpit this way.", 1.5)
-    print_delay("Do you want to take more things from the cockpit?", 1.25)
-
-
 def maze_forest_sleep():
     print_delay("When you go exploring, you hear your stomach grumble, "
                 "thinking that you have to go find food sooner or later.", 2)
-    print_delay("But before you go anywhere, you want to try out the ray gut first.", 1.75)
+    print_delay("But before you go anywhere, you want to try out the ray gun first.", 1.75)
 
 
 def first_town():
@@ -483,64 +436,48 @@ def dead_regoob():
 
 def depression():
     print_delay("Suffering from depression, you suicide by jumping into a pit of quick sand", 5)
+    play_again()
+    print_delay("THE JOURNEY", 1)
+    print_delay("Here is your inventory.", 1)
+    print_delay(characterInventory, 1.5)
+    print_delay("Now that you now where you are, you set out on the quest.", 3)
+    print_delay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
+    print_delay("Now that you realize that this is your goal,", 1.5)
+    print_delay("You set off not knowing where to start.", 1.25)
+    print_delay("So you wander about, also wanting to find some food.", 1.5)
+    meeting_village()
+    
 
-
-play_again()
-=======
-    printDelay("THE JOURNEY", 1)
-    printDelay("Here is your inventory.", 1)
-    printDelay(characterInventory, 1.5)
-    printDelay("Now that you now where you are, you set out on the quest.", 3)
-    printDelay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
-    printDelay("Now that you realize that this"
-               "is your goal,", 1.5)
-    printDelay("You set off not knowing where to start.", 1.25)
-    printDelay("So you wander about, also wanting to find some food.", 1.5)
-    meetingVillage()
-
-
-def thatIsWhenHeRealized():
-    printDelay("as you walk, something tugs a little bit, but not hard."
-               " You look down and see a medium sized branch.", 2)
-    printDelay("When you lift it from the gravity belt, you almost crumple"
-               "from the sudden weight.", 1.5)
-    printDelay("When you clip it back onto your gravity belt,"
-               "it feels almost weightless.", 2)
-    printDelay("This is when you realize you can take more things from the"
-               "cockpit this way.", 1.5)
-    printDelay("Do you want to take more things from the cockpit? (yes or no)", 1.25)
-    isValidResponse = False
-    while not isValidResponse:
+def that_is_when_he_realized():
+    print_delay("as you walk, something tugs a little bit, but not hard. "
+                "You look down and see a medium sized branch.", 2)
+    print_delay("When you lift it from the gravity belt, you almost crumple from the sudden weight.", 1.5)
+    print_delay("When you clip it back onto your gravity belt, it feels almost weightless.", 2)
+    print_delay("This is when you realize you can take more things from the cockpit this way.", 1.5)
+    print_delay("Do you want to take more things from the cockpit? (yes or no)", 1.25)
+    is_valid_response = False
+    while not is_valid_response:
         if input().lower()[:1:] == "y":
-            chooseFromCockpit("gravityBelt", None, None, None, None, None)
+            choose_from_cockpit("gravityBelt", None, None, None, None, None)
 
 
-def mazeForestSleep():
-    printDelay("When you go exploring, you hear your stomach grumble,"
-               "thinking that you have to go find food sooner or later.", 2)
-    printDelay("But before you go anywhere,"
-               "you want to try out the ray gut first.", 1.75)
-
-
-def meetingVillage():
+def meeting_village():
     global mName
-    printDelay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
-    printDelay("You notice that" + mName + "is lagging behind, and he looks scared.", 1)
+    print_delay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
+    print_delay("You notice that" + mName + "is lagging behind, and he looks scared.", 1)
     do = input("Do you ask him why is looks scared?")
     if do.lower()[:1:] == "y":
-        printDelay("THE VILLAGE IS A HUNTING VILLAGE,"
-                   "AND FINDING US IN THE WILD ARE EXPENSIVE.", 2)
-        getShot()
+        print_delay("THE VILLAGE IS A HUNTING VILLAGE, AND FINDING US IN THE WILD ARE EXPENSIVE.", 2)
+        get_shot()
     elif do.lower()[:1:] == "n":
-        printDelay("you just walk along, pondering why he is so scared.", 1.5)
-        getShot()
+        print_delay("you just walk along, pondering why he is so scared.", 1.5)
+        get_shot()
 
 
-def getShot():
+def get_shot():
     pass
 
 
->>>>>>> 30df06540435e98aa81eb0c57bb57f4b8cf3ed4f
 # Is this Welcome() at the end for if the player dies?
 # No its to run
 welcome()
