@@ -332,9 +332,7 @@ def live_with_monster():
         print("Do you want to take a different route or keep goig on the same route?")
         differentRoute = input("take a differnent route(t) or keep going (k)")
         if differentRoute.lower()[:1:] == "t":
-        answer = input("take a different route(t) or keep going (k)")
-        if answer.lower()[:1:] == "t":
-            print("")
+            print_delay("", 0)
         else:
             print("")
         # Temporarily ending the function
