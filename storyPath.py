@@ -177,13 +177,27 @@ def spaceship_investigation():
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
+<<<<<<< HEAD
     elif cargo_explore.lower()[:1:] == "p":
-#       choose_from_cockpit(None, None, None, None, None, None,)
+        #    choose_from_cockpit(None, None, None, None, None, None,)
+        pass
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
     elif cargo_explore.lower()[:1:] == "p":
+        pass
+
+
 #        choose_from_cockpit(None, None, None, None, None, None,)
+=======
+    # elif cargo_explore.lower()[:1:] == "p":
+       # choose_from_cockpit(None, None, None, None, None, None,)
+    cargo_explore = input("Do you want to explore(e) or pick up(p)?")
+    if cargo_explore.lower()[:1:] == "e":
+        meeting_monster()
+#     elif cargo_explore.lower()[:1:] == "p":
+# #        choose_from_cockpit(None, None, None, None, None, None,)
+>>>>>>> 814c7582cf3ac38e3e9dde8f05cd7d6b3daaade5
 
 
 def meeting_monster():
@@ -203,8 +217,8 @@ def meeting_monster():
         print("You believe that he is friendly.")
         time.sleep(1)
         live_with_monster()
-            
-            
+
+
 # # def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
 # #    is_valid_response = False
 #     while not is_valid_response:
@@ -431,22 +445,27 @@ def first_town():
 def dead_regoob():
     print_delay("You go to the village, and immediately you hear a trap go into action.", 3)
     print_delay("You turn around and see that the regoob has been caught.", 1)
+    print_delay("You hide just in time, but you find the regoob being taken away"
+                "into the camp. Hear a squelch, and you know it's over.", 4)
     depression()
 
 
 def depression():
     print_delay("Suffering from depression, you suicide by jumping into a pit of quick sand", 5)
+
+
+def the_journey():
     play_again()
     print_delay("THE JOURNEY", 1)
     print_delay("Here is your inventory.", 1)
     print_delay(characterInventory, 1.5)
-    print_delay("Now that you now where you are, you set out on the quest.", 3)
+    print_delay("Now that you know what to do, you set out on the quest.", 3)
     print_delay("You talk to the regoob, and he agrees to help you on the quest.", 0.5)
     print_delay("Now that you realize that this is your goal,", 1.5)
     print_delay("You set off not knowing where to start.", 1.25)
     print_delay("So you wander about, also wanting to find some food.", 1.5)
     meeting_village()
-    
+
 
 def that_is_when_he_realized():
     print_delay("as you walk, something tugs a little bit, but not hard. "
@@ -456,9 +475,16 @@ def that_is_when_he_realized():
     print_delay("This is when you realize you can take more things from the cockpit this way.", 1.5)
     print_delay("Do you want to take more things from the cockpit? (yes or no)", 1.25)
     is_valid_response = False
+<<<<<<< HEAD
     while not is_valid_response:
         if input().lower()[:1:] == "y":
+            # choose_from_cockpit("gravityBelt", None, None, None, None, None)
+            pass
+=======
+    # while not is_valid_response:
+    #     # if input().lower()[:1:] == "y":
 # choose_from_cockpit("gravityBelt", None, None, None, None, None)
+>>>>>>> 814c7582cf3ac38e3e9dde8f05cd7d6b3daaade5
 
 
 def meeting_village():
