@@ -205,53 +205,53 @@ def meeting_monster():
         live_with_monster()
             
             
-def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
-    is_valid_response = False
-    while not is_valid_response:
-        what_pick = input("What do you want to pick up?"
-                          "You can only pick up one thing:"
-                          "1, 2, 3, 4, 5, or 6?")
-        if what_pick == "1":
-            if cannot_pick1.lower()[:1:] == "r"\
-                    or cannot_pick2.lower()[:1:] == "r"\
-                    or cannot_pick3.lower()[:1:] == "r"\
-                    or cannot_pick4.lower()[:1:] == "r"\
-                    or cannot_pick5.lower()[:1:] == "r"\
-                    or cannot_pick6.lower()[:1:] == "r":
-                pass
-            else:
-                is_valid_response = True
-                maze_forest_sleep()
-        elif what_pick == "2":
-            is_valid_response = True
-            characterInventory.update({"vest": 1})
-            maze_forest()
-        elif what_pick == "3":
-            is_valid_response = True
-            print_delay("You burn yourself, and get mutated into a monster.", 1)
-            print_delay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
-            play_again()
-        elif what_pick == "4":
-            characterInventory.update({"port-sleeping bag": 1})
-            is_valid_response = True
-            maze_forest()  # This we still need to fix.
-        elif what_pick == "5":
-            characterInventory.update({"food": 5})
-            is_valid_response = True
-            maze_forest()  # Same here.
-        elif what_pick == "6":
-            print("You try it on, and nothing happens."
-                  "Do you want to pick another item?")
-            pick_another_item = input()
-            if pick_another_item.lower()[:1:] == "n":
-                is_valid_response = True
-                that_is_when_he_realized()
-            else:
-                choose_from_cockpit(None, None, None, None, None, None,)
-        else:
-            print_delay("Invalid response. Please pick one of the ones above.", 1.25)
-
-
+# # def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
+# #    is_valid_response = False
+#     while not is_valid_response:
+#         what_pick = input("What do you want to pick up?"
+#                           "You can only pick up one thing:"
+#                           "1, 2, 3, 4, 5, or 6?")
+#         if what_pick == "1":
+#             if cannot_pick1.lower()[:1:] == "r"\
+#                     or cannot_pick2.lower()[:1:] == "r"\
+#                     or cannot_pick3.lower()[:1:] == "r"\
+#                     or cannot_pick4.lower()[:1:] == "r"\
+#                     or cannot_pick5.lower()[:1:] == "r"\
+#                     or cannot_pick6.lower()[:1:] == "r":
+#                 pass
+#             else:
+#                 is_valid_response = True
+#                 maze_forest_sleep()
+#         elif what_pick == "2":
+#             is_valid_response = True
+#             characterInventory.update({"vest": 1})
+#             maze_forest()
+#         elif what_pick == "3":
+#             is_valid_response = True
+#             print_delay("You burn yourself, and get mutated into a monster.", 1)
+#             print_delay("The spaceship self-defense system activates and you get shot, and die.", 1.25)
+#             play_again()
+#         elif what_pick == "4":
+#             characterInventory.update({"port-sleeping bag": 1})
+#             is_valid_response = True
+#             maze_forest()  # This we still need to fix.
+#         elif what_pick == "5":
+#             characterInventory.update({"food": 5})
+#             is_valid_response = True
+#             maze_forest()  # Same here.
+#         elif what_pick == "6":
+#             print("You try it on, and nothing happens."
+#                   "Do you want to pick another item?")
+#             pick_another_item = input()
+#             if pick_another_item.lower()[:1:] == "n":
+#                 is_valid_response = True
+#                 that_is_when_he_realized()
+#             else:
+#                 choose_from_cockpit(None, None, None, None, None, None,)
+#         else:
+#             print_delay("Invalid response. Please pick one of the ones above.", 1.25)
+#
+#
 # def clear_screen():
 #     if platform == "darwin":
 #         os.system('clear')
@@ -458,7 +458,7 @@ def that_is_when_he_realized():
     is_valid_response = False
     while not is_valid_response:
         if input().lower()[:1:] == "y":
-            choose_from_cockpit("gravityBelt", None, None, None, None, None)
+            #choose_from_cockpit("gravityBelt", None, None, None, None, None)
 
 
 def meeting_village():
