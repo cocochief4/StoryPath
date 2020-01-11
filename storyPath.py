@@ -177,13 +177,13 @@ def spaceship_investigation():
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
-    elif cargo_explore.lower()[:1:] == "p":
-#       choose_from_cockpit(None, None, None, None, None, None,)
+    # elif cargo_explore.lower()[:1:] == "p":
+       # choose_from_cockpit(None, None, None, None, None, None,)
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
-    elif cargo_explore.lower()[:1:] == "p":
-#        choose_from_cockpit(None, None, None, None, None, None,)
+#     elif cargo_explore.lower()[:1:] == "p":
+# #        choose_from_cockpit(None, None, None, None, None, None,)
 
 
 def meeting_monster():
@@ -456,8 +456,8 @@ def that_is_when_he_realized():
     print_delay("This is when you realize you can take more things from the cockpit this way.", 1.5)
     print_delay("Do you want to take more things from the cockpit? (yes or no)", 1.25)
     is_valid_response = False
-    while not is_valid_response:
-        if input().lower()[:1:] == "y":
+    # while not is_valid_response:
+    #     # if input().lower()[:1:] == "y":
 # choose_from_cockpit("gravityBelt", None, None, None, None, None)
 
 
