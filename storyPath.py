@@ -177,7 +177,6 @@ def spaceship_investigation():
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
-<<<<<<< HEAD
     elif cargo_explore.lower()[:1:] == "p":
         #    choose_from_cockpit(None, None, None, None, None, None,)
         pass
@@ -189,7 +188,6 @@ def spaceship_investigation():
 
 
 #        choose_from_cockpit(None, None, None, None, None, None,)
-=======
     # elif cargo_explore.lower()[:1:] == "p":
        # choose_from_cockpit(None, None, None, None, None, None,)
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
@@ -197,7 +195,13 @@ def spaceship_investigation():
         meeting_monster()
 #     elif cargo_explore.lower()[:1:] == "p":
 # #        choose_from_cockpit(None, None, None, None, None, None,)
->>>>>>> 814c7582cf3ac38e3e9dde8f05cd7d6b3daaade5
+    # elif cargo_explore.lower()[:1:] == "p":
+       # choose_from_cockpit(None, None, None, None, None, None,)
+    cargo_explore = input("Do you want to explore(e) or pick up(p)?")
+    if cargo_explore.lower()[:1:] == "e":
+        meeting_monster()
+#     elif cargo_explore.lower()[:1:] == "p":
+# #        choose_from_cockpit(None, None, None, None, None, None,)
 
 
 def meeting_monster():
@@ -475,16 +479,14 @@ def that_is_when_he_realized():
     print_delay("This is when you realize you can take more things from the cockpit this way.", 1.5)
     print_delay("Do you want to take more things from the cockpit? (yes or no)", 1.25)
     is_valid_response = False
-<<<<<<< HEAD
     while not is_valid_response:
         if input().lower()[:1:] == "y":
             # choose_from_cockpit("gravityBelt", None, None, None, None, None)
             pass
-=======
+
     # while not is_valid_response:
     #     # if input().lower()[:1:] == "y":
 # choose_from_cockpit("gravityBelt", None, None, None, None, None)
->>>>>>> 814c7582cf3ac38e3e9dde8f05cd7d6b3daaade5
 
 
 def meeting_village():
