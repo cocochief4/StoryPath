@@ -1,6 +1,10 @@
 import time
-import random
 import storyPath
+
+characterInventory = storyPath.characterInventory
+stick = storyPath.stick
+mName = storyPath.mName
+runOrFight = storyPath.runOrFight
 
 
 def live_with_monster():
@@ -72,4 +76,6 @@ def live_with_monster():
             print("you keep hearing the sounds of garblins.")
         # Temporarily ending the function
         return
+
+
 live_with_monster()
