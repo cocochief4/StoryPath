@@ -3,6 +3,7 @@
 import time
 import os
 from sys import platform
+import temple1
 
 stick = None
 characterInventory = {}
@@ -187,9 +188,9 @@ def spaceship_investigation():
         pass
 
 
-def chooseFromCockpit():
-    itemChose = input(print_delay("What do you want from the cockpit?", 1.5))
-    if itemChose == 1 or itemChose.lower()[:1:] == "r":
+def choose_from_cockpit():
+    item_chose = input(print_delay("What do you want from the cockpit?", 1.5))
+    if item_chose == 1 or itemChose.lower()[:1:] == "r":
         pass
 
 
@@ -209,7 +210,7 @@ def meeting_monster():
         time.sleep(1.5)
         print("You believe that he is friendly.")
         time.sleep(1)
-        live_with_monster()
+        temple1.live_with_monster()
 
 
 # # def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
