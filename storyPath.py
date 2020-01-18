@@ -35,7 +35,7 @@ def play_again():
     if play.lower()[:1:] == "a" or play.lower()[:1:] == "y":
         welcome()
     else:
-        print_delay("Okay, bye.", 1)
+        print_delay("Okay, killing whole program.", 1)
         return
 
 
