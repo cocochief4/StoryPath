@@ -68,9 +68,9 @@ def live_with_monster():
         print("You got a first aid kit.")
         storyPath.add_inventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
-        print("Do you want to take a different route or keep goig on the same route?")
-        differentRoute = input("take a different route(t) or keep going (k)")
-        if differentRoute.lower()[:1:] == "t":
+        print("Do you want to take a different route or keep going on the same route?")
+        different_route = input("take a different route(t) or keep going (k)")
+        if different_route.lower()[:1:] == "t":
             storyPath.print_delay("", 0)
         else:
             print("you keep hearing the sounds of garblins.")
