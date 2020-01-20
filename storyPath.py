@@ -3,7 +3,7 @@
 import time
 import os
 from sys import platform
-import temple1
+import merger
 
 stick = None
 characterInventory = {}
