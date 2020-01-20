@@ -56,11 +56,6 @@ def welcome():
     are_you_ready = input()
     if are_you_ready.lower()[:1:] == "y":
         start()
-        welcome()
-    are_you_ready = input()
-    if are_you_ready.lower()[:1:] == "y":
-        start()
-
     else:
         print("Okay, bye.")
         return
@@ -179,7 +174,7 @@ def spaceship_investigation():
     if cargo_explore.lower()[:1:] == "e":
         meeting_monster()
     elif cargo_explore.lower()[:1:] == "p":
-        #    choose_from_cockpit(None, None, None, None, None, None,)
+        choose_from_cockpit()
         pass
     cargo_explore = input("Do you want to explore(e) or pick up(p)?")
     if cargo_explore.lower()[:1:] == "e":
@@ -189,6 +184,17 @@ def spaceship_investigation():
 
 
 def choose_from_cockpit():
+    print(" 1) A ray gun")
+    time.sleep(1)
+    print(" 2) A vest, very thick and looking uncomfortable to put on")
+    time.sleep(1.5)
+    print(" 3) 5 chemical vials")
+    time.sleep(1)
+    print(" 4) A portable sleeping bag")
+    time.sleep(1)
+    print(' 5) A bag labeled "food"')
+    time.sleep(1)
+    print(" 6) a belt labeled 'gravity belt'")
     item_chose = input(print_delay("What do you want from the cockpit?", 1.5))
     if item_chose == 1 or itemChose.lower()[:1:] == "r":
         pass
@@ -211,7 +217,6 @@ def meeting_monster():
         print("You believe that he is friendly.")
         time.sleep(1)
         temple1.live_with_monster()
-
 
 # # def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
 # #    is_valid_response = False
@@ -267,6 +272,8 @@ def meeting_monster():
 #         # linux
 #     elif platform == "win32":
 #         os.system('cls')
+
+
 def clear_screen():
     if platform == "darwin":
         os.system('clear')
@@ -417,7 +424,7 @@ def meeting_village():
     print_delay("You notice that" + mName + "is lagging behind, and he looks scared.", 1)
     do = input("Do you ask him why is looks scared?")
     if do.lower()[:1:] == "y":
-        print_delay("THE VILLAGE IS A HUNTING VILLAGE, AND FINDING US IN THE WILD ARE EXPENSIVE.", 2)
+        print_delay("THE VILLAGE IS A HUNTING VILLAGE, AND FINDING US IN THE WILD WOULD LEAD ME TO DEATH!!.", 2)
         get_shot()
     elif do.lower()[:1:] == "n":
         print_delay("you just walk along, pondering why he is so scared.", 1.5)
