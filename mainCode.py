@@ -209,7 +209,7 @@ def meeting_monster():
         print("after a while. the monster wakes up, gobbles up the food,"
               "and looks at you.")
         time.sleep(2)
-        print("HI. it's great deep voice rumbles around you. (its in caps)")
+        print("HI. It's great deep voice rumbles around you.")
         time.sleep(1.5)
         print("You believe that he is friendly.")
         time.sleep(1)
