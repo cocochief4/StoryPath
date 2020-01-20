@@ -1,14 +1,14 @@
 import time
-import storyPath
+import merger
 
-characterInventory = storyPath.characterInventory
-stick = storyPath.stick
-mName = storyPath.mName
-runOrFight = storyPath.runOrFight
-print_delay = storyPath.print_delay
-tired = storyPath.tired
-clear_screen = storyPath.clear_screen
-name = storyPath.name
+characterInventory = merger.characterInventory
+stick = merger.stick
+mName = merger.mName
+runOrFight = merger.runOrFight
+print_delay = merger.print_delay
+tired = merger.tired
+clear_screen = merger.clear_screen
+name = merger.name
 
 
 def live_with_monster():
@@ -31,9 +31,9 @@ def live_with_monster():
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
     time.sleep(5)
-    storyPath.clear_screen()
+    merger.clear_screen()
     time.sleep(1)
-    storyPath.clear_screen()
+    merger.clear_screen()
     time.sleep(5)
     print("MAZE FOREST")
     print_delay("Here is your inventory.", 1)
@@ -71,7 +71,7 @@ def live_with_monster():
         print("To whoever finds this, good luck.")
         print("You pick it up.")
         print("You got a first aid kit.")
-        storyPath.add_inventory("FirstAidKit", 1)
+        merger.add_inventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
         print("Do you want to take a different route or keep going on the same route?")
         different_route = input("take a different route(t) or keep going (k)")
