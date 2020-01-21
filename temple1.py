@@ -1,14 +1,15 @@
 import time
-import mainCode
+import runner
 
-characterInventory = mainCode.characterInventory
-stick = mainCode.stick
-mName = mainCode.mName
-runOrFight = mainCode.runOrFight
-print_delay = mainCode.print_delay
-tired = mainCode.tired
-clear_screen = mainCode.clear_screen
-name = mainCode.name
+
+characterInventory = runner.characterInventory
+stick = runner.stick
+mName = runner.mName
+runOrFight = runner.runOrFight
+print_delay = runner.print_delay
+tired = runner.tired
+clear_screen = runner.clear_screen
+name = runner.name
 
 
 def live_with_monster():
@@ -31,9 +32,9 @@ def live_with_monster():
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
     time.sleep(5)
-    mainCode.clear_screen()
+    runner.clear_screen()
     time.sleep(1)
-    mainCode.clear_screen()
+    runner.clear_screen()
     time.sleep(5)
     print("MAZE FOREST")
     print_delay("Here is your inventory.", 1)
@@ -71,7 +72,7 @@ def live_with_monster():
         print("To whoever finds this, good luck.")
         print("You pick it up.")
         print("You got a first aid kit.")
-        mainCode.add_inventory("FirstAidKit", 1)
+        runner.add_inventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
         print("Do you want to take a different route or keep going on the same route?")
         different_route = input("take a different route(t) or keep going (k)")
