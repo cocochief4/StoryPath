@@ -1,14 +1,7 @@
 import time
 import os
 from sys import platform
-
-stick = None
-characterInventory = {}
-mName = ""
-runOrFight = "a"
-answer = "a"
-
-name = input('Before we begin, please enter your name.')
+import runner
 
 
 def print_delay(msg, delay):
@@ -20,7 +13,6 @@ def print_delay(msg, delay):
 
 
 def add_inventory(key, amount):
-    global characterInventory
     if key in characterInventory:
         characterInventory[key] = amount
     elif key not in characterInventory:
@@ -416,20 +408,23 @@ def that_is_when_he_realized():
 
 
 def meeting_village():
-    global mName
     print_delay("You travel in a direction for 2 days when you stumble a cross a village.", 3)
     print_delay("You notice that" + mName + "is lagging behind, and he looks scared.", 1)
     do = input("Do you ask him why is looks scared?")
     if do.lower()[:1:] == "y":
         print_delay("THE VILLAGE IS A HUNTING VILLAGE, AND FINDING US IN THE WILD WOULD LEAD ME TO DEATH!!.", 2)
-        get_shot()
+        turn_around()
     elif do.lower()[:1:] == "n":
         print_delay("you just walk along, pondering why he is so scared.", 1.5)
         get_shot()
 
 
 def get_shot():
-    pass
+    print("You ")
+
+
+def turn_around():
+    print("You head back, and you go around the village.")
 
 
 # Is this Welcome() at the end for if the player dies?
