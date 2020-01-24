@@ -1,7 +1,11 @@
 import time
 import os
 from sys import platform
-import runner
+import importantStuff
+characterInventory = importantStuff.characterInventory
+stick = importantStuff.stick
+mName = importantStuff.mName
+runOrFight = importantStuff.runOrFight
 
 
 def print_delay(msg, delay):
@@ -140,6 +144,7 @@ def search_pockets():
 
 
 def spaceship_investigation():
+    clear_screen()
     print("When you reach the spaceship, you see a couple of things:")
     time.sleep(1.25)
     print(" 1) A ray gun")
@@ -185,7 +190,17 @@ def choose_from_cockpit():
     time.sleep(1)
     print(" 6) a belt labeled 'gravity belt'")
     item_chose = input(print_delay("What do you want from the cockpit?", 1.5))
-    if item_chose == 1 or itemChose.lower()[:1:] == "r":
+    if item_chose == 1 or item_chose.lower()[:1:] == "r":
+        pass
+    elif item_chose == 2 or item_chose.lower()[:1:] == "v":
+        pass
+    elif item_chose == 3 or item_chose.lower()[:1:] == "c":
+        pass
+    elif item_chose == 4 or item_chose.lower()[:1:] == "s":
+        pass
+    elif item_chose == 5 or item_chose.lower()[:1:] == "b":
+        pass
+    elif item_chose == 6 or item_chose.lower()[:1:] == "g":
         pass
 
 
