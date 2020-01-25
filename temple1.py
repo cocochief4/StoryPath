@@ -33,9 +33,9 @@ def live_with_monster():
     print("The monster points towards Maze Forrest.")
     print("You both walk into the forest.")
     time.sleep(5)
-    importantStuff.clear_screen()
+    mainCode.clear_screen()
     time.sleep(1)
-    importantStuff.clear_screen()
+    mainCode.clear_screen()
     time.sleep(5)
     print("MAZE FOREST")
     print_delay("Here is your inventory.", 1)
@@ -73,7 +73,7 @@ def live_with_monster():
         print("To whoever finds this, good luck.")
         print("You pick it up.")
         print("You got a first aid kit.")
-        importantStuff.add_inventory("FirstAidKit", 1)
+        mainCode.add_inventory("FirstAidKit", 1)
         print("As you're walking through the temple, you see a group of garblins that are patrolling the temple.")
         print("Do you want to take a different route or keep going on the same route?")
         different_route = input("take a different route(t) or keep going (k)")
@@ -83,6 +83,3 @@ def live_with_monster():
             print("you keep hearing the sounds of garblins.")
         # Temporarily ending the function
         return
-
-
-live_with_monster()
