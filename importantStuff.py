@@ -1,3 +1,5 @@
+import os
+from sys import platform
 stick = None
 characterInventory = {}
 mName = ""
