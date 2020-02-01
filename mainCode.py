@@ -1,6 +1,5 @@
 import time
-import os
-from sys import platform
+import temple1
 import importantStuff
 characterInventory = importantStuff.characterInventory
 stick = importantStuff.stick
@@ -131,7 +130,7 @@ def search_pockets():
 
 
 def spaceship_investigation():
-    clear_screen()
+    importantStuff.clear_screen()
     print("When you reach the spaceship, you see a couple of things:")
     time.sleep(1.25)
     print(" 1) A ray gun")
