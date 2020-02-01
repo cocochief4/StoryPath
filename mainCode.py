@@ -1,5 +1,4 @@
 import time
-import temple1
 import os
 from sys import platform
 import importantStuff
@@ -8,20 +7,7 @@ stick = importantStuff.stick
 mName = importantStuff.mName
 runOrFight = importantStuff.runOrFight
 
-
-def print_delay(msg, delay):
-    print(msg)
-    time.sleep(delay)
-
-
 # def add_inventory(key, amount):
-
-
-def add_inventory(key, amount):
-    if key in characterInventory:
-        characterInventory[key] = amount
-    elif key not in characterInventory:
-        characterInventory.update({key: amount})
 
 
 def play_again():
@@ -221,7 +207,7 @@ def meeting_monster():
         time.sleep(1.5)
         print("You believe that he is friendly.")
         time.sleep(1)
-        temple1.live_with_monster()
+        live_with_monster()
 
 # # def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
 # #    is_valid_response = False
@@ -277,20 +263,6 @@ def meeting_monster():
 #         # linux
 #     elif platform == "win32":
 #         os.system('cls')
-
-
-def clear_screen():
-    if platform == "darwin":
-        os.system('clear')
-    elif platform == "linux" or platform == "linux2":
-        os.system('clear')
-    elif platform == "win32":
-        os.system('cls')
-
-
-def tired():
-    print_delay("After all of what happened today, you just want to fall asleep.", 1.75)
-    sleep()
 
 
 def sleep():
