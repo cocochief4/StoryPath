@@ -206,7 +206,7 @@ def meeting_monster():
         time.sleep(1.5)
         print("You believe that he is friendly.")
         time.sleep(1)
-        live_with_monster()
+        temple1.live_with_monster()
 
 # # def choose_from_cockpit(cannot_pick1, cannot_pick2, cannot_pick3, cannot_pick4, cannot_pick5, cannot_pick6):
 # #    is_valid_response = False
