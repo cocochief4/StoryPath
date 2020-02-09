@@ -28,7 +28,7 @@ def live_with_monster():
     print("After a while he gives you a stick.")
     time.sleep(1)
     print("You don't know why though...")
-    print("The monster points towards Maze Forrest.")
+    print("The monster points towards Maze Forest.")
     print("You both walk into the forest.")
     time.sleep(5)
     importantStuff.clear_screen()
@@ -77,7 +77,15 @@ def live_with_monster():
         different_route = input("take a different route(t) or keep going (k)")
         if different_route.lower()[:1:] == "t":
             print_delay("", 0)
-        else:
+        elif different_route.lower()[:1:] == "k":
             print("you keep hearing the sounds of garblins.")
+            print("You really want to beat them up")
+            t = input("Do you keep your temper?")
+            if t.lower()[:1:] == "y":
+                print("You keep your cool, and you eventually find your way out of the forest.")
+                print_delay("However, you notice that your shin is badly cut, and is starting to hurt.", 2)
+                h = input("Do you use the first aid kit?")
+                if h.lower()[:1:] == "y":
+                    print("You successfully clean the wound, and it heals")
         # Temporarily ending the function
         return
