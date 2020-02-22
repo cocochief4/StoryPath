@@ -1,12 +1,12 @@
 import time
 import importantStuff
 
+player = importantStuff.player
 characterInventory = importantStuff.characterInventory
 stick = importantStuff.stick
 mName = importantStuff.mName
 runOrFight = importantStuff.runOrFight
 print_delay = importantStuff.print_delay
-tired = importantStuff.tired
 clear_screen = importantStuff.clear_screen
 name = importantStuff.name
 
@@ -27,6 +27,7 @@ def live_with_monster():
     time.sleep(1)
     print("After a while he gives you a stick.")
     time.sleep(1)
+    characterInventory.append("Stick")
     print("You don't know why though...")
     print("The monster points towards Maze Forest.")
     print("You both walk into the forest.")
@@ -41,10 +42,6 @@ def live_with_monster():
     time.sleep(1)
     print_delay("As you walk through this forest, you realize just how big it is.", 1.5)
     print_delay("You hear sounds that sound like talking.", 1)
-    print_delay("You " + mName + "hide behind a bush.", 1)
-    print_delay("You look behind the bush, and see a horde of garblins.", 1.5)
-    print_delay("As you walk through this forest, you realize just how big it is.", 1.5)
-    print_delay("You hear sounds that sound like talking.", 1)
     print_delay("You and " + mName + " hide behind a bush.", 1)
     print_delay("You look behind the bush, and see a horde of garblins.", 1.5)
     print("They are half gargoyle, half goblin creatures.")
@@ -57,7 +54,7 @@ def live_with_monster():
         tired()
     else:
         print("You and the monster jump out of the bush and succesfully defend against the garblins.")
-        print("You walk a bit further in the forrest, and come across a huge temple like structure.")
+        print("You walk a bit further in the forest, and come across a huge temple like structure.")
         time.sleep(5)
         clear_screen()
         print("THE TEMPLE OF THE GARBLINS")
