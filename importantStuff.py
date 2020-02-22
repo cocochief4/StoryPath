@@ -1,21 +1,19 @@
 import time
 import os
+import character
 from sys import platform
 stick = None
-characterInventory = {}
+characterInventory = []
 mName = ""
 runOrFight = "a"
 answer = "a"
+name = input('Before we begin, please enter your name.')
+player = character.Character(name, characterInventory)
 
 
 def print_delay(msg, delay):
     print(msg)
     time.sleep(delay)
-
-
-def tired():
-    print_delay("After all of what happened today, you just want to fall asleep.", 1.75)
-    sleep()
 
 
 def clear_screen():
@@ -30,8 +28,8 @@ def clear_screen():
 def add_inventory(key, amount):
     if key in characterInventory:
         characterInventory[key] = amount
-    elif key not in characterInventory:
+    else:
         characterInventory.update({key: amount})
 
 
-name = input('Before we begin, please enter your name.')
+
